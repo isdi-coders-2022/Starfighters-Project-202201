@@ -1,5 +1,5 @@
-const HomePage = () => {
-  return <h2> Returning Home Page</h2>;
+const CharacterListPage = () => {
+  return <h2> Returning Character List Page</h2>;
 };
 
-export default HomePage;
+export default CharacterListPage;
