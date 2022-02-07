@@ -47,13 +47,10 @@ const StarContextProvider = ({ children }) => {
     const starFighters = await Promise.all(arrayStarFighters);
     return starFighters;
   }
-
-  const starFightersFetch = getStarFighters(
-    "https://akabab.github.io/starwars-api/api/all.json"
-  );
+  const starFighters = () => getStarFighters;
 
   return (
-    <StarContext.Provider value={{ character }}>
+    <StarContext.Provider value={{ character, starFighters }}>
       {children}
     </StarContext.Provider>
   );
