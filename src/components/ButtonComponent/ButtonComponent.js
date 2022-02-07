@@ -1,5 +1,3 @@
-import { useContext } from "react";
-
 const Button = (onClickAction, className) => {
   return (
     <Button
