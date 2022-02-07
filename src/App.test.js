@@ -10,7 +10,6 @@ describe("Given an App component", () => {
           <App></App>
         </BrowserRouter>
       );
-
       const expectedOutput = screen.getByRole("main");
 
       expect(expectedOutput).toBeInTheDocument();
@@ -22,9 +21,7 @@ describe("Given an App component", () => {
         <App></App>
       </BrowserRouter>
     );
-
     const expectedOutput = screen.getByText("Star Fighters");
-
     expect(expectedOutput).toBeInTheDocument();
   });
 });
