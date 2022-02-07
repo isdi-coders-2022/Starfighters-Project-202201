@@ -11,13 +11,13 @@ Páginas:
 Componentes:
 
 - StarContextComponent --> 
-	- Envía función navigate a los botones de navegación.
-	- Recoge objeto Personaje creado por CharacterCreateFormComponent.
-	- Envía objeto Personaje a CharacterUpdateFormComponent y recoge objeto creado con nuevos datos.
-	- Añade objeto Personaje a la API local cuando se crea o guarda uno.
-	- Elimina objeto Personaje de la API local al borrar un favorito.
-	- Recoger datos de objeto Personaje de la API púbica.
-	- Renderiza Error y Loading cuando falle un catch y cuando sea necesario lazy loading.
+- Envía función navigate a los botones de navegación.
+- Recoge objeto Personaje creado por CharacterCreateFormComponent.
+- Envía objeto Personaje a CharacterUpdateFormComponent y recoge objeto creado con nuevos datos.
+- Añade objeto Personaje a la API local cuando se crea o guarda uno.
+- Elimina objeto Personaje de la API local al borrar un favorito.
+- Recoger datos de objeto Personaje de la API púbica.
+- Renderiza Error y Loading cuando falle un catch y cuando sea necesario lazy loading.
 
 
 
