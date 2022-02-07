@@ -4,15 +4,14 @@ Páginas:
 
 - HomePage
 - CharacterListPage
-- FilterPage
-- CharacterPage
+- CharacterForm Page
 - CreatePage
 
 Componentes:
 
 - StarContextComponent --> 
 - Envía función navigate a los botones de navegación.
-- Recoge objeto Personaje creado por CharacterCreateFormComponent.
+- Recoge objeto Personaje creado por CharacterCreateFormComponent. 
 - Envía objeto Personaje a CharacterUpdateFormComponent y recoge objeto creado con nuevos datos.
 - Añade objeto Personaje a la API local cuando se crea o guarda uno.
 - Elimina objeto Personaje de la API local al borrar un favorito.
@@ -32,22 +31,16 @@ Componentes:
 
 Acciones:
 
-Lista API Pública
+Lista API Pública --> StarContext
 
-- Mostrar
+- Cargar.
 
-[Lista local] (Estado)
+[Lista API local] (Estado) --> StarContext
 
-- Mostrar
+- Cargar.
 - Añadir objeto Personaje
 - Eliminar objeto Personaje
-
-Objeto Personaje
-
-Mostrar
-Crear
-Eliminar
-Modificar
+- Modificar objeto Personaje
 
 
 
