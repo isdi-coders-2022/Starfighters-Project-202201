@@ -1,10 +1,15 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 
 describe("Given an App component", () => {
   describe("When it is invoked", () => {
     test("Then it should render a main element", () => {
-      render(<App></App>);
+      render(
+        <BrowserRouter>
+          <App></App>
+        </BrowserRouter>
+      );
 
       const expectedOutput = screen.getByRole("main");
 
@@ -12,7 +17,11 @@ describe("Given an App component", () => {
     });
   });
   test("A header with Star Fighters should be rendered", () => {
-    render(<App></App>);
+    render(
+      <BrowserRouter>
+        <App></App>
+      </BrowserRouter>
+    );
 
     const expectedOutput = screen.getByText("Star Fighters");
 
