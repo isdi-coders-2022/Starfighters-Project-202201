@@ -1,10 +1,10 @@
 const Button = (onClickAction, className) => {
   return (
-    <Button
+    <button
       type="button"
       onClick={onClickAction}
       className={`${className}`}
-    ></Button>
+    ></button>
   );
 };
 
