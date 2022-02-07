@@ -1,11 +1,5 @@
-const Button = (onClickAction, className) => {
-  return (
-    <Button
-      type="button"
-      onClick={onClickAction}
-      className={`${className}`}
-    ></Button>
-  );
+const Button = (onClickAction) => {
+  return <Button type="button" onClick={onClickAction}></Button>;
 };
 
 export default Button;
