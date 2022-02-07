@@ -41,8 +41,16 @@ const StarContextProvider = ({ children }) => {
     formerAffiliations: [],
   };
 
+  async function getStarFighters(endpoint) {
+    const firstList = await fetch(endpoint);
+    const arrayStarFighters = await firstList.json();
+    const starFighters = await Promise.all(arrayStarFighters);
+    return starFighters;
+  }
+  const starFighters = () => getStarFighters;
+
   return (
-    <StarContext.Provider value={{ character }}>
+    <StarContext.Provider value={{ character, starFighters }}>
       {children}
     </StarContext.Provider>
   );
