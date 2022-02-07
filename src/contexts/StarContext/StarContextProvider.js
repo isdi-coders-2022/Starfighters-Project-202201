@@ -7,11 +7,12 @@ const StarContextProvider = ({ children }) => {
     const starFighters = await Promise.all(arrayStarFighters);
     return starFighters;
   }
-  const starFighters = () =>
-    getStarFighters("https://akabab.github.io/starwars-api/api/all.json");
+  const starFightersList = getStarFighters(
+    "https://akabab.github.io/starwars-api/api/all.json"
+  );
 
   return (
-    <StarContext.Provider value={{ starFighters }}>
+    <StarContext.Provider value={{ starFightersList }}>
       {children}
     </StarContext.Provider>
   );
