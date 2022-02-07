@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import StarContextProvider from "./contexts/StarContext/StarContextProvider";
+import StarContextProvider from "./store/contexts/StarContext/StarContextProvider";
 
 ReactDOM.render(
   <React.StrictMode>
