@@ -48,7 +48,7 @@ const StarContextProvider = ({ children }) => {
     return starFighters;
   }
 
-  const starFightersFetch = await getStarFighters(
+  const starFightersFetch = getStarFighters(
     "https://akabab.github.io/starwars-api/api/all.json"
   );
 
