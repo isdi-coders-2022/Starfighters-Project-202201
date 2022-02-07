@@ -7,11 +7,11 @@ import StarContextProvider from "./contexts/StarContext/StarContextProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-  <BrowserRouter>
-    <StarContextProvider>
-      <App />
-    </StarContextProvider>
-  </BrowserRouter>
+    <BrowserRouter>
+      <StarContextProvider>
+        <App />
+      </StarContextProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
