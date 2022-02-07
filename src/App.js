@@ -1,4 +1,6 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
@@ -11,6 +13,9 @@ function App() {
               <li class="navigation__list__profile">icon 2</li>
             </ul>
           </nav>
+          <Routes>
+            <Route path="/" element={<HomePage />}></Route>
+          </Routes>
           <h1 class="header__logo">Star Fighters</h1>
         </header>
       </main>
