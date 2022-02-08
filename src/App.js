@@ -5,7 +5,6 @@ import CharacterDetailsPage from "./pages/CharacterDetailsPage";
 import CharacterListPage from "./pages/CharacterListPage";
 import HomePage from "./pages/HomePage";
 import styled from "styled-components";
-import ButtonComponent from "./components/ButtonComponent/ButtonComponent";
 
 const TitleStar = styled.h1`
   @font-face {
