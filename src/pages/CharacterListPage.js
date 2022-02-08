@@ -4,7 +4,6 @@ import StarContext from "../store/contexts/StarContext/StarContext";
 
 const CharacterListPage = () => {
   const { fighters } = useContext(StarContext);
-  console.log(fighters);
   return (
     <>
       <h2> Returning Character List Page</h2>;

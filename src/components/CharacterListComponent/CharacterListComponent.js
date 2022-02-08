@@ -1,9 +1,8 @@
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const CharactersListComponent = ({ fighter }) => {
   let navigate = useNavigate();
   const goToPage = () => {
-    console.log("Hola");
     navigate(`/character-details/${fighter.id}`);
   };
   return (
