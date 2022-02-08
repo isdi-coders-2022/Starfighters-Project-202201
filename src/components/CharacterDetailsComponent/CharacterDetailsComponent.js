@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import StarContext from "../../contexts/StarContext/StarContext";
 
-const CharactersDetails = () => {
+const CharactersDetailsComponent = () => {
   const { starFighters } = useContext(StarContext);
 
   return (
@@ -24,4 +24,4 @@ const CharactersDetails = () => {
   );
 };
 
-export default CharactersDetails;
+export default CharactersDetailsComponent;
