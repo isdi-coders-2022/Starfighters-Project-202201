@@ -1,19 +1,28 @@
+import { useEffect, useState } from "react";
+import starFighters from "../../../starFighters";
 import StarContext from "./StarContext";
 
 const StarContextProvider = ({ children }) => {
-  async function getStarFighters(endpoint) {
-    const firstList = await fetch(endpoint);
-    const arrayStarFighters = await firstList.json();
-    const starFighters = Promise.all(arrayStarFighters);
-    return starFighters;
-  }
-  const starFighters = getStarFighters(
-    "https://akabab.github.io/starwars-api/api/all.json"
+
+  const [fighters, setFighters] = useState([starFighters]);
+
+  useEffect(
+    () => async () => {
+      const fetchedData = await fetch(
+        "https://akabab.github.io/starwars-api/api/all.json"
+      );
+      const array = await fetchedData.json();
+      setFighters([...array]);
+    },
+    [setFighters]
   );
+
+
   return (
-    <StarContext.Provider value={{ starFighters }}>
+    <StarContext.Provider value={{ setFighters, fighters }}>
       {children}
     </StarContext.Provider>
   );
+
 };
 export default StarContextProvider;
