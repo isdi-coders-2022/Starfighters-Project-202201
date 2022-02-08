@@ -7,7 +7,7 @@ describe("Given an App component", () => {
     test("Then it should render a main element", () => {
       render(
         <BrowserRouter>
-          <App></App>
+          <App />
         </BrowserRouter>
       );
       const expectedOutput = screen.getByRole("main");
@@ -18,7 +18,7 @@ describe("Given an App component", () => {
   test("A header with Star Fighters should be rendered", () => {
     render(
       <BrowserRouter>
-        <App></App>
+        <App/>
       </BrowserRouter>
     );
     const expectedOutput = screen.getByText("Star Fighters");
