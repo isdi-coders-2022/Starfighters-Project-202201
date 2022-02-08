@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import CharacterCreatorFormPage from "./pages/CharacterCreatorFormPage";
 import CharacterDetailsPage from "./pages/CharacterDetailsPage";
@@ -17,7 +17,8 @@ function App() {
             </ul>
           </nav>
           <Routes>
-            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/*" element={<Navigate to="/home" />} />
+            <Route path="/home" element={<HomePage />}></Route>
             <Route path="/character-list" element={<CharacterListPage />} />
             <Route
               path="/character-details"
@@ -28,7 +29,10 @@ function App() {
               element={<CharacterCreatorFormPage />}
             />
           </Routes>
-          <h1 className="header__logo">Star Fighters</h1>
+
+          <TitleStar className="header__logo">
+            Star <span className="heading-breaker"></span> Fighters
+          </TitleStar>
         </header>
       </main>
     </>
