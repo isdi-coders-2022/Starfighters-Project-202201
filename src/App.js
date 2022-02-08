@@ -11,7 +11,10 @@ const TitleStar = styled.h1`
  }
    font-family: "Star Jedi";
    color: yellow;
-   font-size: 20px;
+   font-size: 70px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
  `;
 function App() {
   /*  const Try1 = styled.div`
@@ -42,7 +45,9 @@ function App() {
               element={<CharacterCreatorFormPage />}
             />
           </Routes>
-          <TitleStar className="header__logo">Star Fighters</TitleStar>
+          <TitleStar className="header__logo">
+            Star <span class="heading-breaker"></span> Fighters
+          </TitleStar>
           {/* <Try1></Try1> Test of dynamical styles */}
         </header>
       </main>
