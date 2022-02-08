@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Navigate } from "react-router-dom";
-import StarContext from "../store/contexts/StarContext/StarContext";
+import StarContext from "../../store/contexts/StarContext/StarContext";
 
 const CharactersListComponent = () => {
   const { starFighters } = useContext(StarContext);
