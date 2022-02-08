@@ -30,9 +30,9 @@ function App() {
             />
           </Routes>
 
-          <TitleStar className="header__logo">
+          {/* <TitleStar className="header__logo">
             Star <span className="heading-breaker"></span> Fighters
-          </TitleStar>
+          </TitleStar> */}
         </header>
       </main>
     </>
