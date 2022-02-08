@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import CharactersListComponent from "../components/CharacterListComponent/CharacterListComponent";
 import StarContext from "../store/contexts/StarContext/StarContext";
 
 const CharacterListPage = () => {
@@ -8,7 +9,7 @@ const CharacterListPage = () => {
       <h2> Returning Character List Page</h2>;
       <ul>
         {starFighters.map((fighter) => {
-          return <CharacterListPage />;
+          return <CharactersListComponent />;
         })}
       </ul>
     </>

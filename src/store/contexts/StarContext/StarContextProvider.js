@@ -151,7 +151,7 @@ const StarContextProvider = ({ children }) => {
   );
 
   return (
-    <StarContext.Provider value={{ setFighters, starFighters }}>
+    <StarContext.Provider value={{ setFighters, starFighters, fighters }}>
       {children}
     </StarContext.Provider>
   );
