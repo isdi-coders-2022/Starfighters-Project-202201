@@ -14,3 +14,8 @@ export const deleteFighterAction = (id) => ({
   type: actionTypes.deleteFighter,
   id,
 });
+
+export const updateFighterAction = (fighter) => ({
+  type: actionTypes.updateFighter,
+  fighter,
+});
