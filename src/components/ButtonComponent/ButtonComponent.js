@@ -1,4 +1,4 @@
-const Button = (onClickAction, className) => {
+const Button = ({ onClickAction, className }) => {
   return (
     <button
       type="button"
