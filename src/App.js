@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import CharacterCreatorFormPage from "./pages/CharacterCreatorFormPage";
 import CharacterDetailsPage from "./pages/CharacterDetailsPage";
@@ -7,7 +7,19 @@ import HomePage from "./pages/HomePage";
 import styled from "styled-components";
 
 const TitleStar = styled.h1`
-  @font-face {font-family: "Star Jedi"; src: url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.eot"); src: url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.woff") format("woff"), url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.svg#Star Jedi") format("svg"); }
+  @font-face {
+    font-family: "Star Jedi";
+    src: url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.eot");
+    src: url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.eot?#iefix")
+        format("embedded-opentype"),
+      url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.woff2")
+        format("woff2"),
+      url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.woff")
+        format("woff"),
+      url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.ttf")
+        format("truetype"),
+      url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.svg#Star Jedi")
+        format("svg");
   }
   font-family: "Star Jedi";
   color: yellow;
@@ -16,6 +28,7 @@ const TitleStar = styled.h1`
   flex-direction: column;
   align-items: center;
 `;
+
 function App() {
   return (
     <>
@@ -23,8 +36,12 @@ function App() {
         <header className="header col-12">
           <nav className="navigation col-12">
             <ul className="navigation__list list-unstyled">
-              <li className="navigation__list__matches">icon 1</li>
-              <li className="navigation__list__profile">icon 2</li>
+              <li className="navigation__list__matches">
+                <Link to="/character-list">Character List</Link>;
+              </li>
+              <li className="navigation__list__profile">
+                <Link to="/home">Home</Link>;
+              </li>
             </ul>
           </nav>
           <Routes>
