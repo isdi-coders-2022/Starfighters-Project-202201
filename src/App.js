@@ -17,12 +17,6 @@ const TitleStar = styled.h1`
    align-items: center;
  `;
 function App() {
-  /*  const Try1 = styled.div`
-    background-color: rgb(35, 35, 35);
-    width: 100px;
-    height: 100px;
-  `; */
-
   return (
     <>
       <main className="main row col-12" name="main">
@@ -48,7 +42,6 @@ function App() {
           <TitleStar className="header__logo">
             Star <span class="heading-breaker"></span> Fighters
           </TitleStar>
-          {/* <Try1></Try1> Test of dynamical styles */}
         </header>
       </main>
     </>
