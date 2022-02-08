@@ -5,3 +5,4 @@ const actionTypes = {
   updateFighter: "update-fighter",
 };
 export default actionTypes;
+ 
