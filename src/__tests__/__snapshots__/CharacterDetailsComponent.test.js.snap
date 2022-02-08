@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a CharacterDetailsComponent component When executing the component Then it should render 1`] = `
+<div
+  class="character-details"
+>
+  <img
+    alt="character profile"
+    className="character-details__image"
+    src="https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg"
+    width="400"
+  />
+  <h2
+    className="character-details__name"
+  >
+    Luke Skywalker
+  </h2>
+  <section
+    className="character-details__info"
+  >
+    <p>
+      Height:
+      1.72
+    </p>
+    <p>
+      Mass: 
+      73
+    </p>
+    <p>
+      Homeworld: 
+      tatooine
+    </p>
+    <p>
+      Species: 
+      human
+    </p>
+    <p>
+      More info: 
+      http://starwars.wikia.com/wiki/Luke_Skywalker
+    </p>
+  </section>
+</div>
+`;
