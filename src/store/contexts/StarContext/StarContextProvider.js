@@ -137,7 +137,7 @@ const StarContextProvider = ({ children }) => {
       formerAffiliations: [],
     },
   ];
-  const [fighters, setFighters] = useState([starFighters]);
+  const [fighters, setFighters] = useState(starFighters);
 
   useEffect(
     () => async () => {

@@ -1,23 +1,19 @@
-import { useContext } from "react";
-import StarContext from "../../contexts/StarContext/StarContext";
-
-const CharactersDetailsComponent = ({ onFocus }) => {
-  const { starFighters } = useContext(StarContext);
-
+const CharactersDetailsComponent = ({ fighter }) => {
   return (
     <div class="character-details">
       <img
         className="character-details__image"
         alt="character profile"
-        src={starFighters[onFocus].image}
+        src={fighter.image}
+        width="400"
       />
-      <h2 className="character-details__name">{starFighters[onFocus].name}</h2>
+      <h2 className="character-details__name">{fighter.name}</h2>
       <section className="character-details__info">
-        <p>Height:{starFighters[onFocus].height}</p>
-        <p>Mass: {starFighters[onFocus].mass}</p>
-        <p>Homeworld: {starFighters[onFocus].homeworld}</p>
-        <p>Species: {starFighters[onFocus].species}</p>
-        <p>More info: {starFighters[onFocus].wiki}</p>
+        <p>Height:{fighter.height}</p>
+        <p>Mass: {fighter.mass}</p>
+        <p>Homeworld: {fighter.homeworld}</p>
+        <p>Species: {fighter.species}</p>
+        <p>More info: {fighter.wiki}</p>
       </section>
     </div>
   );
