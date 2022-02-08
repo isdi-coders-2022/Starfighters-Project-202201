@@ -17,9 +17,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "coverage": "test --coverage"
   },
   "eslintConfig": {
     "extends": [
@@ -44,8 +45,8 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src//.js",
-      "!src//.test.js"
+      "src/**/*.js",
+      "!src/**/*.test.js"
     ]
   }
 }
