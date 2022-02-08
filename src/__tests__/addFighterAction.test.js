@@ -1,8 +1,8 @@
 import { addFighterAction } from "../store/actions/actionCreators";
 
 describe("Given a addFighterAction function", () => {
-  describe("When called with an array", () => {
-    test('Then it should return an object with type: "load-fighters" and the array.', () => {
+  describe("When called with a fighter", () => {
+    test('Then it should return an object with type: "add-fighters" and the object.', () => {
       const fighter = { name: "Skywalker", age: 25, lightsaber: "green" };
       const expectedAction = {
         type: "add-fighter",
