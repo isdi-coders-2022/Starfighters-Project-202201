@@ -40,7 +40,7 @@ function App() {
             />
           </Routes>
           <TitleStar className="header__logo">
-            Star <span class="heading-breaker"></span> Fighters
+            Star <span className="heading-breaker"></span> Fighters
           </TitleStar>
         </header>
       </main>
