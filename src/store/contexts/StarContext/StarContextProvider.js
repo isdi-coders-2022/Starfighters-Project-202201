@@ -3,7 +3,6 @@ import starFighters from "../../../starFighters";
 import StarContext from "./StarContext";
 
 const StarContextProvider = ({ children }) => {
-
   const [fighters, setFighters] = useState([starFighters]);
 
   useEffect(
@@ -17,12 +16,10 @@ const StarContextProvider = ({ children }) => {
     [setFighters]
   );
 
-
   return (
     <StarContext.Provider value={{ setFighters, fighters }}>
       {children}
     </StarContext.Provider>
   );
-
 };
 export default StarContextProvider;
