@@ -48,7 +48,7 @@ function App() {
             <Route path="/" element={<HomePage />}></Route>
             <Route path="/character-list" element={<CharacterListPage />} />
             <Route
-              path="/character-details"
+              path="/character-details/:id"
               element={<CharacterDetailsPage />}
             />
             <Route
