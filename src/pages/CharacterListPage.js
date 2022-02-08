@@ -3,14 +3,15 @@ import CharactersListComponent from "../components/CharacterListComponent/Charac
 import StarContext from "../store/contexts/StarContext/StarContext";
 
 const CharacterListPage = () => {
-  const { starFighters } = useContext(StarContext);
+  const { fighters } = useContext(StarContext);
+  console.log(fighters);
   return (
     <>
       <h2> Returning Character List Page</h2>;
       <ul>
-        {starFighters.map((fighter) => {
-          return <CharactersListComponent />;
-        })}
+        {fighters.map((fighter) => (
+          <CharactersListComponent key={fighter.id} fighter={fighter} />
+        ))}
       </ul>
     </>
   );

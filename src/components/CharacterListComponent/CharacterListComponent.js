@@ -1,24 +1,22 @@
-import { useContext } from "react";
-import { Navigate } from "react-router-dom";
-import StarContext from "../../store/contexts/StarContext/StarContext";
+import { Navigate, useNavigate } from "react-router-dom";
 
-const CharactersListComponent = () => {
-  const { starFighters } = useContext(StarContext);
-
+const CharactersListComponent = ({ fighter }) => {
+  let navigate = useNavigate();
+  const goToPage = () => {
+    console.log("Hola");
+    navigate(`/character-details/${fighter.id}`);
+  };
   return (
-    <li
-      class="character"
-      onClick={<Navigate to={`/character-details/${starFighters.id}`} />}
-      onFocus={starFighters.id}
-    >
+    <li class="character" onClick={goToPage}>
       <img
         className="character-list__image"
         alt="character profile"
-        src={starFighters.image}
+        src={fighter.image}
+        width="200"
       />
-      <h2 className="character-list__name">{starFighters.name}</h2>
+      <h2 className="character-list__name">{fighter.name}</h2>
       <section>
-        <p>Homeworld: {starFighters.homeworld}</p>
+        <p>Homeworld: {fighter.homeworld}</p>
       </section>
     </li>
   );
