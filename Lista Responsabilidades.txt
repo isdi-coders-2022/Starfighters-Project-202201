@@ -24,7 +24,7 @@ Componentes:
 - ButtonComponent --> Renderiza un botón con el icono que le pasen y llama a la función que le pasen.
 - CharacterCreateFormComponent --> Renderiza un form, recoge los datos introducidos y crear objeto Personaje.
 - CharacterUpdateFormComponent --> Renderiza un form, recoge los datos que le pasan y modifica objeto Personaje.
-- CharacterComponent --> Renderiza datos que le pasan y llama una función que le pasan al ser clicado.
+- CharacterListComponent --> Renderiza datos que le pasan y llama una función que le pasan al ser clicado.
 - CharacterDetails Component --> Renderiza datos del objeto que le pasan.
 - ErrorComponent --> Renderiza elementos.
 - Loading Component --> Renderiza elementos.
