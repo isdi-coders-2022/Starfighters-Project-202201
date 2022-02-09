@@ -11,7 +11,7 @@ const CharacterListPage = () => {
   };
   return (
     <>
-      <ul>
+      <ul className="list-unstyled">
         {fighters.map((fighter) => (
           <CharactersListComponent
             key={fighter.id}
