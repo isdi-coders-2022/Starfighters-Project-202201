@@ -4,12 +4,12 @@ import userEvent from "@testing-library/user-event";
 
 describe("Given a Button component", () => {
   describe("When it's rendered", () => {
-    test("Then it should display a button", () => {
+    test("Then it should display a button with accessible id of 'Back'", () => {
       render(<Button id="back" />);
 
       const buttonTest = screen.queryByTestId("back");
 
-      expect(buttonTest).toBeInTheDocument();
+      expect(buttonTest).toHaveAccessibleName();
     });
   });
   describe("When it receives an action and a button is clicked", () => {
