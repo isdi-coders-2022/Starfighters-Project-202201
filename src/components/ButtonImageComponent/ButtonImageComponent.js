@@ -1,4 +1,4 @@
-const ButtonBack = ({ onClickAction }) => {
+const ButtonImage = ({ onClickAction }) => {
   return (
     <button type="button-back" onClick={onClickAction}>
       <img src="Back_Button.png" alt="Back" />
@@ -6,4 +6,4 @@ const ButtonBack = ({ onClickAction }) => {
   );
 };
 
-export default ButtonBack;
+export default ButtonImage;
