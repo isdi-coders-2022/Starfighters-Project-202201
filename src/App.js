@@ -1,5 +1,4 @@
 import { Route, Routes, Link } from "react-router-dom";
-import "./App.css";
 import CharacterCreatorFormPage from "./pages/CharacterCreatorFormPage";
 import CharacterDetailsPage from "./pages/CharacterDetailsPage";
 import CharacterListPage from "./pages/CharacterListPage";
