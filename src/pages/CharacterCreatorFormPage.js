@@ -1,6 +1,5 @@
 import { useState } from "react";
-import CharacterCreatorComponent from "../components/CharacterCreatorComponent/CharacterCreatorComponent";
-
+import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
 
 const CharacterCreatorFormPage = () => {
   const blankFields = {
@@ -27,11 +26,11 @@ const CharacterCreatorFormPage = () => {
     });
   };
 
-  /*const onFormSubmit = (event) => {   //MANDA A LA API LOCAL
-     event.preventDefault();
-     addGentlemanAPI(formData);
-     resetForm();
-   }; */
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+    // addGentlemanAPI(formData);
+    resetForm();
+  };
 
   const resetForm = () => {
     setFormData(blankFields);
@@ -52,66 +51,107 @@ const CharacterCreatorFormPage = () => {
     <>
       <h2> Returning Character Creator Form Page</h2>
       <form
-        className="new-gentlemen"
+        className="new-character"
         onSubmit={onFormSubmit}
         autoComplete="off"
         noValidate
       >
-        <CharacterCreatorComponent
-          type={"text"}
-          content={"Name"}
-          name={"name"}
-          inputOnChange={addData}
-        />
-        <CharacterCreatorComponent
-          type={"number"}
-          content={"Height"}
-          name={"height"}
-          inputOnChange={addData}
-        />
-        <CharacterCreatorComponent
-          type={"number"}
-          content={"Mass"}
-          name={"mass"}
-          inputOnChange={addData}
-        />
-        <CharacterCreatorComponent
-          type={"text"}
-          content={"Gender"}
-          name={"gender"}
-          inputOnChange={addData}
-        />
-        <CharacterCreatorComponent
-          type={"text"}
-          content={"Homeworld"}
-          name={"homeworld"}
-          inputOnChange={addData}
-        />
-        <CharacterCreatorComponent
-          type={"text"}
-          content={"Species"}
-          name={"species"}
-          inputOnChange={addData}
-        />
-        <CharacterCreatorComponent
-          type={"text"}
-          content={"Affiliation"}
-          name={"affiliation"}
-          inputOnChange={addData}
-        />
-        <CharacterCreatorComponent
-          type={"text"}
-          content={"Master"}
-          name={"master"}
-          inputOnChange={addData}
-        />
-        <CharacterCreatorComponent
-          type={"url"}
-          content={"Image"}
-          name={"image"}
-          inputOnChange={addData}
-        />
-        <ButtonImage type="submit" disabled={!isFilled} src={} alt={"Create character"}></ButtonImage>
+        <div className="form-group">
+          <label htmlFor="name">Name: </label>
+          <input
+            type="text"
+            id="name"
+            className="form-input"
+            value={formData.name}
+            onChange={changeData}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="name">Height: </label>
+          <input
+            type="number"
+            id="height"
+            className="form-input"
+            value={formData.height}
+            onChange={changeData}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="name">Mass: </label>
+          <input
+            type="number"
+            id="mass"
+            className="form-input"
+            value={formData.mass}
+            onChange={changeData}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="name">Gender: </label>
+          <input
+            type="text"
+            id="gender"
+            className="form-input"
+            value={formData.gender}
+            onChange={changeData}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="name">Homeworld: </label>
+          <input
+            type="text"
+            id="homeworld"
+            className="form-input"
+            value={formData.homeworld}
+            onChange={changeData}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="name">Species: </label>
+          <input
+            type="text"
+            id="species"
+            className="form-input"
+            value={formData.species}
+            onChange={changeData}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="name">Affiliation: </label>
+          <input
+            type="text"
+            id="affiliation"
+            className="form-input"
+            value={formData.affiliation}
+            onChange={changeData}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="name">Master: </label>
+          <input
+            type="text"
+            id="master"
+            className="form-input"
+            value={formData.master}
+            onChange={changeData}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="name">Image: </label>
+          <input
+            type="url"
+            id="image"
+            className="form-input"
+            value={formData.image}
+            onChange={changeData}
+          />
+        </div>
+        <ButtonImage
+          type="submit"
+          disabled={!isFilled}
+          src={"../components/ButtonImageComponent/Confirm.png"}
+          alt={"Create character"}
+        ></ButtonImage>
       </form>
     </>
   );

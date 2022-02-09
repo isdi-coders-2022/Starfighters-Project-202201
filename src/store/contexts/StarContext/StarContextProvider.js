@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import starFighters from "../../../starFighters";
 import StarContext from "./StarContext";
 
 const StarContextProvider = ({ children }) => {
@@ -150,12 +149,8 @@ const StarContextProvider = ({ children }) => {
     [setFighters]
   );
 
-  const [character, setCharacter] = useState({});
-
   return (
-    <StarContext.Provider
-      value={{ setFighters, starFighters, fighters, character }}
-    >
+    <StarContext.Provider value={{ setFighters, starFighters, fighters }}>
       {children}
     </StarContext.Provider>
   );
