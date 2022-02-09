@@ -1,6 +1,6 @@
 const CharactersDetailsComponent = ({ fighter }) => {
   return (
-    <div class="character-details">
+    <div className="character-details">
       <img
         className="character-details__image"
         alt="character profile"
