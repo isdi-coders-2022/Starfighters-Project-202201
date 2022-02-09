@@ -1,7 +1,7 @@
-const ButtonImage = ({ onClickAction }) => {
+const ButtonImage = ({ type, onClickAction, src, alt }) => {
   return (
-    <button type="button-back" onClick={onClickAction}>
-      <img src="Back_Button.png" alt="Back" />
+    <button type={type} onClick={onClickAction}>
+      <img src={src} alt={alt} />
     </button>
   );
 };
