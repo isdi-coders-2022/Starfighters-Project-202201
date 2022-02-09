@@ -1,5 +1,5 @@
 import actionTypes from "../store/actions/actionTypes";
-import starFighterReducer from "../store/reducers/starFighterReducer";
+import starReducer from "../store/reducers/starReducer";
 
 describe("Given a starReducer function", () => {
   describe("When given an array with three fighters and the loadFighters action", () => {
@@ -144,7 +144,7 @@ describe("Given a starReducer function", () => {
         starFighters: expectedFighters,
       };
 
-      const newFighters = starFighterReducer(inputFighters, action);
+      const newFighters = starReducer(inputFighters, action);
 
       expect(newFighters).toEqual(expectedFighters);
     });
@@ -161,7 +161,7 @@ describe("Given a starReducer function", () => {
 
       const expectedFighters = [...inputFighters, { ...action.fighter }];
 
-      const newFighters = starFighterReducer(inputFighters, action);
+      const newFighters = starReducer(inputFighters, action);
 
       expect(newFighters).toEqual(expectedFighters);
     });
@@ -400,7 +400,7 @@ describe("Given a starReducer function", () => {
         id,
       };
 
-      const newFighters = starFighterReducer(inputFighters, action);
+      const newFighters = starReducer(inputFighters, action);
 
       expect(newFighters).toEqual(expectedFighters);
     });
@@ -645,7 +645,7 @@ describe("Given a starReducer function", () => {
         fighter,
       };
 
-      const newFighters = starFighterReducer(inputFighters, action);
+      const newFighters = starReducer(inputFighters, action);
 
       expect(newFighters).toEqual(expectedFighters);
     });

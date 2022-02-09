@@ -1,8 +1,13 @@
-import { useEffect, useState } from "react";
+
+// import { useReducer } from "react";
+// import { loadFightersAction } from "../../actions/actionCreators";
+// import starReducer from "../../reducers/starReducer";
+
 import StarContext from "./StarContext";
 
 const StarContextProvider = ({ children }) => {
-  const starFighters = [
+  //const [starFighters, dispatch] = useReducer(starReducer);
+  const fighters = [
     {
       id: 1,
       name: "Luke Skywalker",
@@ -136,23 +141,9 @@ const StarContextProvider = ({ children }) => {
       formerAffiliations: [],
     },
   ];
-  const [fighters, setFighters] = useState(starFighters);
-
-  useEffect(
-    () => async () => {
-      const fetchedData = await fetch(
-        "https://akabab.github.io/starwars-api/api/all.json"
-      );
-      const array = await fetchedData.json();
-      setFighters([...array]);
-    },
-    [setFighters]
-  );
-
+  //dispatch(starFighters, loadFightersAction(fighters));
   return (
-    <StarContext.Provider value={{ setFighters, starFighters, fighters }}>
-      {children}
-    </StarContext.Provider>
+    <StarContext.Provider value={{ fighters }}>{children}</StarContext.Provider>
   );
 };
 export default StarContextProvider;
