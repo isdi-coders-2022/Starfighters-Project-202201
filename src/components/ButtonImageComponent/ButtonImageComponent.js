@@ -1,9 +1,9 @@
-const ButtonBack = ({ onClickAction }) => {
+const ButtonImage = ({ onClickAction, src, alt }) => {
   return (
-    <button type="button-back" onClick={onClickAction}>
-      <img src="Back_Button.png" alt="Back" />
+    <button type="button" onClick={onClickAction}>
+      <img src={src} alt={alt} />
     </button>
   );
 };
 
-export default ButtonBack;
+export default ButtonImage;
