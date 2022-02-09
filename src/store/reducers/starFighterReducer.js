@@ -31,4 +31,5 @@ const starFighterReducer = (currentStarFighters, action) => {
   }
   return newStarFighters;
 };
+
 export default starFighterReducer;
