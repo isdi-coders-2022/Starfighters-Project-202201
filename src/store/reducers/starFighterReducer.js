@@ -17,10 +17,8 @@ const starFighterReducer = (currentStarFighters, action) => {
       break;
     case actionTypes.updateFighter:
       newStarFighters = currentStarFighters.map((starFighter) => {
-        if (starFighter.id === action.id) {
-          return {
-            ...starFighter,
-          };
+        if (starFighter.id === action.fighter.id) {
+          return { ...action.fighter };
         }
         return { ...starFighter };
       });
