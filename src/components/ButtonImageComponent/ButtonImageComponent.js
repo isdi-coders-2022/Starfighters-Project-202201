@@ -1,7 +1,7 @@
 const ButtonImage = ({ type, onClickAction, src, alt }) => {
   return (
     <button type={type} onClick={onClickAction}>
-      <img src={src} alt={alt} />
+      <img src={`../../../public/icons/${src}`} alt={alt} />
     </button>
   );
 };
