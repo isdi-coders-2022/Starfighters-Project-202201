@@ -7,7 +7,7 @@ export const loadFightersAction = (starFighters) => ({
 
 export const addFighterAction = (fighter) => ({
   type: actionTypes.addFighter,
-  fighter,
+  fighter: fighter,
 });
 
 export const deleteFighterAction = (id) => ({

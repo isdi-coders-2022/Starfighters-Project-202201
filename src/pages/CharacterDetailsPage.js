@@ -1,3 +1,4 @@
+//import { useParams } from "react-router-dom";
 import CharactersDetailsComponent from "../components/CharacterDetailsComponent/CharacterDetailsComponent";
 
 const CharacterDetailsPage = () => {
@@ -40,6 +41,8 @@ const CharacterDetailsPage = () => {
     ],
     formerAffiliations: [],
   };
+  //const { id } = useParams();
+
   return (
     <>
       <h2> Returning Character Details Page</h2>;
