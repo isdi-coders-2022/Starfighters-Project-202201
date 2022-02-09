@@ -1,6 +1,6 @@
 const CharactersListComponent = ({ fighter, actionOnClick }) => {
   return (
-    <li class="character" onClick={actionOnClick}>
+    <li className="character" onClick={actionOnClick}>
       <img
         className="character-list__image"
         alt="character profile"

@@ -51,7 +51,9 @@
       "!src/index.js"
     ],
     "coverageReporters": [
+      "json",
       "html",
+      "lcov",
       "text"
     ]
   }
