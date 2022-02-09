@@ -14,7 +14,13 @@ const CharacterListPage = () => {
       <h2> Returning Character List Page</h2>;
       <ul>
         {fighters.map((fighter) => (
-          <CharactersListComponent key={fighter.id} fighter={fighter} actionOnClick={() => {goToPage(fighter.id)}} />
+          <CharactersListComponent
+            key={fighter.id}
+            fighter={fighter}
+            actionOnClick={() => {
+              goToPage(fighter.id);
+            }}
+          />
         ))}
       </ul>
     </>
