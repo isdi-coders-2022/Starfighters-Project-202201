@@ -1,0 +1,43 @@
+Edgar:
+  Ayer:
+    -Estuvo liado con el fetch e intentando resolver pq recibiamos una promesa.
+    -Termino la mitad del test del Reducer.
+    -Termino las Action types
+    -Termino las Action Creators
+    -Termino los tests a las Action Creators
+  Stoppers:
+    -Bug del array de starfighters
+    -Test del reducer le resulto complicado
+    -Entender que el control del fetch no podia ser por console.log por asincronia
+  Hoy:
+    -Configurar Netlify las variables env
+    -Test del Reducer terminar
+    -Terminar custom hook
+    -Incorporar los cambios de Revision Mario
+
+Adam:
+  Ayer:
+    -Termino el enrutado y sus tests
+    -Corregir App.js pequenyos bugs
+    -Test del componente CharacterList.
+  Stoppers:
+    -Estropeo el mac
+    -Se lio con el test del enrutado puesto que no le encontraba la logica.
+  Hoy:
+    -Desplegable del Filtrado
+    -Estilo a los componentes
+    -Integrar cambios de la Revision de Mario
+
+Guillem:
+  Ayer:
+    -Termino el componente CharacterDetail y su Page.
+    -Termino el componente CharacterList y su Page.
+    -Termino el test de Button.
+    -Empezo el Formulario para el Creator.
+  Stoppers:
+    -Le esta costando mucho entender toda la arquitectura
+    -No tener el array definitivo
+    -Se encallo con el fetch a la api remota con Edgar
+  Hoy:
+    -Formulario de introducci'on de datos para Creator y Updater
+    -Crear el Objeto destino para introducir los datos del formulario.

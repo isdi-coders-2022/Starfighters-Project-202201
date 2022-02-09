@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import starFighters from "../../../starFighters";
 import StarContext from "./StarContext";
 
 const StarContextProvider = ({ children }) => {
