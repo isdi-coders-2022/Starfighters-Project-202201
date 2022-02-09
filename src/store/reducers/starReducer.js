@@ -1,8 +1,7 @@
 import actionTypes from "../actions/actionTypes";
 
-const starFighterReducer = (currentStarFighters, action) => {
+const starReducer = (currentStarFighters, action) => {
   let newStarFighters;
-
   switch (action.type) {
     case actionTypes.loadFighters:
       newStarFighters = [...action.starFighters];
@@ -30,4 +29,4 @@ const starFighterReducer = (currentStarFighters, action) => {
   return newStarFighters;
 };
 
-export default starFighterReducer;
+export default starReducer;
