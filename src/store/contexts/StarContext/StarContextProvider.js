@@ -150,8 +150,12 @@ const StarContextProvider = ({ children }) => {
     [setFighters]
   );
 
+  const [character, setCharacter] = useState({});
+
   return (
-    <StarContext.Provider value={{ setFighters, starFighters, fighters }}>
+    <StarContext.Provider
+      value={{ setFighters, starFighters, fighters, character }}
+    >
       {children}
     </StarContext.Provider>
   );
