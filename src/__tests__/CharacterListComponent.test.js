@@ -51,7 +51,7 @@ describe("Given a CharacterListComponent,", () => {
           <CharactersListComponent
             fighter={fighter}
             actionOnClick={mockFunction}
-          />{" "}
+          />
         </BrowserRouter>
       );
       userEvent.click(screen.queryByRole("listitem"));
@@ -81,7 +81,7 @@ describe("Given a CharacterListComponent,", () => {
       );
       const expectedOutput = screen.getByText("Luke Skywalker");
 
-      expect(expectedOutput).toStrictEqual(fighter.name);
+      expect(expectedOutput.textContent).toStrictEqual(fighter.name);
     });
   });
 });

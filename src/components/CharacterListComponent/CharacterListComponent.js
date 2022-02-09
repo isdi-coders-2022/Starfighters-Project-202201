@@ -1,4 +1,5 @@
 const CharactersListComponent = ({ fighter, actionOnClick }) => {
+  console.log(fighter.name);
   return (
     <li className="character" onClick={actionOnClick}>
       <img
