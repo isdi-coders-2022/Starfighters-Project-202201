@@ -43,6 +43,9 @@ function App() {
               </li>
             </ul>
           </nav>
+          <TitleStar className="header__logo">
+            Star <span className="heading-breaker"></span> Fighters
+          </TitleStar>
           <Routes>
             <Route path="/" element={<HomePage />}></Route>
             <Route path="/character-list" element={<CharacterListPage />} />
@@ -55,9 +58,6 @@ function App() {
               element={<CharacterCreatorFormPage />}
             />
           </Routes>
-          <TitleStar className="header__logo">
-            Star <span className="heading-breaker"></span> Fighters
-          </TitleStar>
         </header>
       </main>
     </>
