@@ -1,8 +1,28 @@
+@import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 body {
   margin: 0;
+  background-color: rgb(35, 35, 35);
+  color: yellow;
+  display: flex;
+  justify-content: center;
 }
 
 #root {
   margin: 0;
   padding: 0;
+}
+
+container {
+  width: 80vw;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.heading-breaker {
+  display: block;
 }
