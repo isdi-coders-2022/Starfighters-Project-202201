@@ -41,7 +41,7 @@ const CharacterDetailsPage = () => {
     ],
     formerAffiliations: [],
   };
-  const { id } = useParams();
+  //const { id } = useParams();
 
   return (
     <>
