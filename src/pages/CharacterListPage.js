@@ -11,7 +11,6 @@ const CharacterListPage = () => {
   };
   return (
     <>
-      <h2> Returning Character List Page</h2>;
       <ul>
         {fighters.map((fighter) => (
           <CharactersListComponent
