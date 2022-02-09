@@ -4,7 +4,7 @@ import reactTestRenderer from "react-test-renderer";
 
 describe("Given a CharacterDetailsComponent component", () => {
   describe("When it's rendered", () => {
-    test("Then it should display a <p> with text 'Height'", () => {
+    test("Then it should display an <h>", () => {
       const fighter = {
         id: 1,
         name: "Luke Skywalker",

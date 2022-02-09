@@ -1,17 +1,18 @@
+import { StyledCharacter } from "./CharacterListComponent.style";
 const CharactersListComponent = ({ fighter, actionOnClick }) => {
   return (
-    <li className="character" onClick={actionOnClick}>
+    <StyledCharacter className="character" onClick={actionOnClick}>
       <img
         className="character-list__image"
         alt="character profile"
         src={fighter.image}
         width="200"
       />
-      <h2 className="character-list__name">{fighter.name}</h2>
-      <section>
+      <section className="name-section">
+        <h2 className="character-list__name">{fighter.name}</h2>
         <p>Homeworld: {fighter.homeworld}</p>
       </section>
-    </li>
+    </StyledCharacter>
   );
 };
 
