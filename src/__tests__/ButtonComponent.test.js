@@ -5,9 +5,9 @@ import userEvent from "@testing-library/user-event";
 describe("Given a Button component", () => {
   describe("When it's rendered", () => {
     test("Then it should display a button", () => {
-      render(<Button />);
+      render(<Button id="back" />);
 
-      const buttonTest = screen.queryByRole("button");
+      const buttonTest = screen.queryByTestId("back");
 
       expect(buttonTest).toBeInTheDocument();
     });
