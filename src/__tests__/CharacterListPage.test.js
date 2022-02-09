@@ -13,9 +13,9 @@ describe("Given a CharacterListPage function", () => {
           </StarContextProvider>
         </BrowserRouter>
       );
-      const element = screen.getByRole("list");
+      const element = screen.getAllByRole("heading");
 
-      expect(element).toBeInTheDocument();
+      expect(element[0]).toBeInTheDocument();
     });
   });
 });
