@@ -24,6 +24,9 @@ function App() {
               <li className="navigation__list__matches">
                 <Link to="/character-list">Character List</Link>;
               </li>
+              <li className="navigation__list__create">
+                <Link to="/character-creator">Create</Link>;
+              </li>
               <li className="navigation__list__profile">
                 <Link to="/home">Home</Link>;
               </li>
