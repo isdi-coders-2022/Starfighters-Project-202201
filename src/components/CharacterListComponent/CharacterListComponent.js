@@ -1,7 +1,4 @@
-import {
-  StyledCharacter,
-  StyledCharacterTitle,
-} from "./CharacterListComponent.style";
+import { StyledCharacter } from "./CharacterListComponent.style";
 const CharactersListComponent = ({ fighter, actionOnClick }) => {
   return (
     <StyledCharacter className="character" onClick={actionOnClick}>
@@ -11,10 +8,8 @@ const CharactersListComponent = ({ fighter, actionOnClick }) => {
         src={fighter.image}
         width="200"
       />
-      <StyledCharacterTitle className="character-list__name">
-        {fighter.name}
-      </StyledCharacterTitle>
       <section>
+        <h2 className="character-list__name">{fighter.name}</h2>
         <p>Homeworld: {fighter.homeworld}</p>
       </section>
     </StyledCharacter>
