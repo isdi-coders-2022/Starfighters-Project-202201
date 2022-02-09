@@ -1,23 +1,27 @@
 import { render, screen } from "@testing-library/react";
-import ButtonText from "../components/ButtonTextComponent/ButtonComponent/ButtonTextComponent";
+import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
 import userEvent from "@testing-library/user-event";
 
 describe("Given a ButtonText component", () => {
   describe("When it's rendered", () => {
     test("Then it should display a button with text 'Naboo'", () => {
-      render(<ButtonText text="Naboo" />);
-      const expectedOutput = "Naboo";
+      render(
+        <ButtonImage
+          src="../components/ButtonImageComponent/Back.png"
+          alt="back"
+        />
+      );
 
-      const buttonTest = screen.queryByText("Naboo");
+      const buttonTest = screen.getByRole("img");
 
-      expect(buttonTest.textContent).toMatch(expectedOutput);
+      expect(buttonTest).toBeInTheDocument();
     });
   });
   describe("When it receives an action and a button is clicked", () => {
     test("Then it should call the action", () => {
       const action = jest.fn();
 
-      render(<ButtonText onClickAction={action} />);
+      render(<ButtonImage onClickAction={action} />);
 
       userEvent.click(screen.queryByRole("button"));
 
