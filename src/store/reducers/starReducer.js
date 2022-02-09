@@ -2,6 +2,7 @@ import actionTypes from "../actions/actionTypes";
 
 const starReducer = (currentStarFighters, action) => {
   let newStarFighters;
+
   switch (action.type) {
     case actionTypes.loadFighters:
       newStarFighters = [...action.starFighters];
@@ -26,6 +27,7 @@ const starReducer = (currentStarFighters, action) => {
     default:
       newStarFighters = [...currentStarFighters];
   }
+
   return newStarFighters;
 };
 
