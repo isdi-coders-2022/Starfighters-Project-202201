@@ -1,13 +1,18 @@
 import { render, screen } from "@testing-library/react";
-import Button from "../components/ButtonComponent/ButtonComponent";
+import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
 import userEvent from "@testing-library/user-event";
 
-describe("Given a Button component", () => {
+describe("Given a ButtonText component", () => {
   describe("When it's rendered", () => {
-    test("Then it should display a button", () => {
-      render(<Button />);
+    test("Then it should display a button with text 'Naboo'", () => {
+      render(
+        <ButtonImage
+          src="../components/ButtonImageComponent/Back.png"
+          alt="back"
+        />
+      );
 
-      const buttonTest = screen.queryByRole("button");
+      const buttonTest = screen.getByRole("img");
 
       expect(buttonTest).toBeInTheDocument();
     });
@@ -16,7 +21,7 @@ describe("Given a Button component", () => {
     test("Then it should call the action", () => {
       const action = jest.fn();
 
-      render(<Button onClickAction={action} />);
+      render(<ButtonImage onClickAction={action} />);
 
       userEvent.click(screen.queryByRole("button"));
 
