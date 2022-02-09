@@ -8,7 +8,7 @@ const CharactersListComponent = ({ fighter, actionOnClick }) => {
         src={fighter.image}
         width="200"
       />
-      <section>
+      <section className="name-section">
         <h2 className="character-list__name">{fighter.name}</h2>
         <p>Homeworld: {fighter.homeworld}</p>
       </section>

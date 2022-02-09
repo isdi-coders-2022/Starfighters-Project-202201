@@ -11,8 +11,9 @@ const StyledCharacter = styled.li`
   margin: 10px;
   width: 285px;
   height: 65px;
+  background-color: rgb(90, 90, 90);
 
-  section {
+  .name-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
