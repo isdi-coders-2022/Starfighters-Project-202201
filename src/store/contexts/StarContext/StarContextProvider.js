@@ -1,6 +1,6 @@
-import { useReducer } from "react";
-import { loadFightersAction } from "../../actions/actionCreators";
-import starReducer from "../../reducers/starReducer";
+// import { useReducer } from "react";
+// import { loadFightersAction } from "../../actions/actionCreators";
+// import starReducer from "../../reducers/starReducer";
 import StarContext from "./StarContext";
 
 const StarContextProvider = ({ children }) => {
