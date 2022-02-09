@@ -1,7 +1,7 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { BrowserRouter } from "react-router-dom"
-import CharactersListComponent from "../components/CharacterListComponent/CharacterListComponent"
+import { BrowserRouter } from "react-router-dom";
+import CharactersListComponent from "../components/CharacterListComponent/CharacterListComponent";
 
 describe("Given a CharacterListComponent,", () => {
   describe("When it receives a fighter", () => {
@@ -17,9 +17,13 @@ describe("Given a CharacterListComponent,", () => {
         image:
           "https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg",
         born: -19,
-        bornLocation: "polis massa"
-      }
-      render(<BrowserRouter><CharactersListComponent fighter={fighter}/> </BrowserRouter> );
+        bornLocation: "polis massa",
+      };
+      render(
+        <BrowserRouter>
+          <CharactersListComponent fighter={fighter} />{" "}
+        </BrowserRouter>
+      );
       const expectedOutput = screen.getByRole("listitem");
 
       expect(expectedOutput).toBeInTheDocument();
@@ -39,13 +43,37 @@ describe("Given a CharacterListComponent,", () => {
         image:
           "https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg",
         born: -19,
-        bornLocation: "polis massa"
-      }
+        bornLocation: "polis massa",
+      };
 
-      render(<BrowserRouter><CharactersListComponent fighter={fighter} actionOnClick={mockFunction}/> </BrowserRouter> );
+      render(
+        <BrowserRouter>
+          <CharactersListComponent
+            fighter={fighter}
+            actionOnClick={mockFunction}
+          />{" "}
+        </BrowserRouter>
+      );
       userEvent.click(screen.queryByRole("listitem"));
 
       expect(mockFunction).toHaveBeenCalled();
-    })
-  })
+    });
+  });
+  describe("When it receives a fighter named 'Luke Skywalker'", () => {
+    test("Then it should render its name", () => {
+      const fighter = {
+        id: 1,
+        name: "Luke Skywalker",
+        height: 1.72,
+        mass: 73,
+        gender: "male",
+        homeworld: "tatooine",
+        wiki: "http://starwars.wikia.com/wiki/Luke_Skywalker",
+        image:
+          "https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg",
+        born: -19,
+        bornLocation: "polis massa",
+      };
+    });
+  });
 });
