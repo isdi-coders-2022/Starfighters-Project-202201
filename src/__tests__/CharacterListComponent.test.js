@@ -21,7 +21,7 @@ describe("Given a CharacterListComponent,", () => {
       };
       render(
         <BrowserRouter>
-          <CharactersListComponent fighter={fighter} />{" "}
+          <CharactersListComponent fighter={fighter} />
         </BrowserRouter>
       );
       const expectedOutput = screen.getByRole("listitem");
@@ -74,6 +74,14 @@ describe("Given a CharacterListComponent,", () => {
         born: -19,
         bornLocation: "polis massa",
       };
+      render(
+        <BrowserRouter>
+          <CharactersListComponent fighter={fighter} />
+        </BrowserRouter>
+      );
+      const expectedOutput = screen.getByText("Luke Skywalker");
+
+      expect(expectedOutput).toStrictEqual(fighter.name);
     });
   });
 });
