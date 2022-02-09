@@ -1,12 +1,7 @@
-import { useNavigate } from "react-router-dom";
-
-const CharactersListComponent = ({ fighter }) => {
-  let navigate = useNavigate();
-  const goToPage = () => {
-    navigate(`/character-details/${fighter.id}`);
-  };
+const CharactersListComponent = ({ fighter, actionOnClick }) => {
+  console.log(fighter.name);
   return (
-    <li class="character" onClick={goToPage}>
+    <li className="character" onClick={actionOnClick}>
       <img
         className="character-list__image"
         alt="character profile"
