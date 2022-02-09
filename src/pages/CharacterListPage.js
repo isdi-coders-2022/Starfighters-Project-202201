@@ -1,10 +1,17 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CharactersListComponent from "../components/CharacterListComponent/CharacterListComponent";
+import usePublicAPI from "../hooks/usePublicAPI";
 import StarContext from "../store/contexts/StarContext/StarContext";
 
 const CharacterListPage = () => {
-  const { fighters } = useContext(StarContext);
+  const { loadFightersAPI } = usePublicAPI();
+  const { starFighters } = useContext(StarContext);
+
+  useEffect(() => {
+    loadFightersAPI();
+  }, [loadFightersAPI]);
+
   let navigate = useNavigate();
   let goToPage = (id) => {
     navigate(`/character-details/${id}`);
@@ -13,7 +20,7 @@ const CharacterListPage = () => {
     <>
       <h2> Returning Character List Page</h2>;
       <ul>
-        {fighters.map((fighter) => (
+        {starFighters.map((fighter) => (
           <CharactersListComponent
             key={fighter.id}
             fighter={fighter}
