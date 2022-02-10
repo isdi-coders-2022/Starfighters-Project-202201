@@ -4,7 +4,6 @@ import CharacterDetailsPage from "./pages/CharacterDetailsPage";
 import CharacterListPage from "./pages/CharacterListPage";
 import HomePage from "./pages/HomePage";
 import styled from "styled-components";
-import Error from "./components/ErrorComponent/ErrorComponent";
 
 const TitleStar = styled.h1`
   color: yellow;
@@ -22,7 +21,7 @@ const TitleStar = styled.h1`
   .fighters {
     display: flex;
     margin: 5px;
-    width: 280px;
+    width: 285px;
     height: 40px;
   }
 `;
@@ -58,7 +57,6 @@ function App() {
             />
           </TitleStar>
           <Routes>
-            <Route path="/*" element={<Error />}></Route>
             <Route path="/home" element={<HomePage />}></Route>
             <Route path="/character-list" element={<CharacterListPage />} />
             <Route
