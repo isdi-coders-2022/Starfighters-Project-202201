@@ -19,7 +19,6 @@ const CharacterMatchesListPage = () => {
 
   const { deleteFighterAPI } = useStarAPI();
 
-
   let navigate = useNavigate();
   let goToPage = (id) => {
     navigate(`/character-details/${id}`);
@@ -28,7 +27,6 @@ const CharacterMatchesListPage = () => {
     <>
       <StarFightersBox className="list-unstyled">
         {myFighters.map((fighter) => (
-
           <>
             <CharacterListComponent
               key={fighter.id}
@@ -39,11 +37,12 @@ const CharacterMatchesListPage = () => {
             />
             <ButtonImage
               type="button"
-              onClickAction={deleteFighterAPI(fighter.id)}
+              onClickAction={() => {
+                deleteFighterAPI(fighter.id);
+              }}
               src="Cross"
             />
           </>
-
         ))}
       </StarFightersBox>
     </>
