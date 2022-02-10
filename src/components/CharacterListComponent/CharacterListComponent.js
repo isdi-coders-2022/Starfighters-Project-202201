@@ -1,5 +1,5 @@
 import { StyledCharacter } from "./CharacterListComponent.style";
-const CharactersListComponent = ({ fighter, actionOnClick }) => {
+const CharactersListComponent = ({ fighter, actionOnClick, children }) => {
   return (
     <StyledCharacter className="character" onClick={actionOnClick}>
       <img
@@ -12,6 +12,7 @@ const CharactersListComponent = ({ fighter, actionOnClick }) => {
         <h2 className="character-list__name">{fighter.name}</h2>
         <p>Homeworld: {fighter.homeworld}</p>
       </section>
+      {children}
     </StyledCharacter>
   );
 };
