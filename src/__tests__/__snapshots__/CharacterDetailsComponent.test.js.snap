@@ -2,7 +2,7 @@
 
 exports[`Given a CharacterDetailsComponent component When executing the component Then it should render 1`] = `
 <div
-  className="sc-bdvvtL jFChNI character-details"
+  className="sc-bdvvtL hbhmpE character-details"
 >
   <img
     alt="character profile"
@@ -10,35 +10,41 @@ exports[`Given a CharacterDetailsComponent component When executing the componen
     src="https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg"
     width="400"
   />
-  <div />
-  <h2
-    className="character-details__name"
+  <div
+    className="light-div"
+  />
+  <div
+    className="section-div"
   >
-    Luke Skywalker
-  </h2>
-  <section
-    className="character-details__info"
-  >
-    <p>
-      Height:
-      1.72
-    </p>
-    <p>
-      Mass: 
-      73
-    </p>
-    <p>
-      Homeworld: 
-      tatooine
-    </p>
-    <p>
-      Species: 
-      human
-    </p>
-    <p>
-      More info: 
-      http://starwars.wikia.com/wiki/Luke_Skywalker
-    </p>
-  </section>
+    <h2
+      className="character-details__name"
+    >
+      Luke Skywalker
+    </h2>
+    <section
+      className="character-details__info"
+    >
+      <p>
+        Height:
+        1.72
+      </p>
+      <p>
+        Mass: 
+        73
+      </p>
+      <p>
+        Homeworld: 
+        tatooine
+      </p>
+      <p>
+        Species: 
+        human
+      </p>
+      <p>
+        More info: 
+        http://starwars.wikia.com/wiki/Luke_Skywalker
+      </p>
+    </section>
+  </div>
 </div>
 `;
