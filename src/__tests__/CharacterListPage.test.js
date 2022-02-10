@@ -13,9 +13,24 @@ describe("Given a CharacterListPage function", () => {
           </StarContextProvider>
         </BrowserRouter>
       );
-      const element = screen.getAllByRole("list");
+      const element = screen.getByRole("list");
 
-      expect(element[0]).toBeInTheDocument();
+      expect(element).toBeInTheDocument();
+    });
+  });
+
+  describe("When rendered", () => {
+    test("Then it should render a button", () => {
+      render(
+        <BrowserRouter>
+          <StarContextProvider>
+            <CharacterListPage />
+          </StarContextProvider>
+        </BrowserRouter>
+      );
+      const element = screen.getByRole("button");
+
+      expect(element).toBeInTheDocument();
     });
   });
 });
