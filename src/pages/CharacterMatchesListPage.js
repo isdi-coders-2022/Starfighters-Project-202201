@@ -6,17 +6,17 @@ import styled from "styled-components";
 import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
 import useStarAPI from "../hooks/useStarAPI";
 
+const StarFightersBox = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid yellow;
+`;
+
 const CharacterMatchesListPage = () => {
   const { myFighters } = useContext(StarContext);
   const { deleteFighterAPI } = useStarAPI();
-
-  const StarFightersBox = styled.ul`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid yellow;
-  `;
 
   let navigate = useNavigate();
   let goToPage = (id) => {
