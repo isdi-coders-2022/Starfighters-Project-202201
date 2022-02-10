@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import CharactersListComponent from "../components/CharacterListComponent/CharacterListComponent";
-import usePublicAPI from "../hooks/usePublicAPI";
 import StarContext from "../store/contexts/StarContext/StarContext";
 import styled from "styled-components";
 
