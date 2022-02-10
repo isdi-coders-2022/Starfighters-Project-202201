@@ -2,7 +2,11 @@ import PropTypes from "prop-types";
 
 const ButtonText = ({ onClickAction, text }) => {
   return (
-    <button type="button-text" onClick={onClickAction}>
+    <button
+      className={"filter-button"}
+      type="button-text"
+      onClick={onClickAction}
+    >
       {text}
     </button>
   );
