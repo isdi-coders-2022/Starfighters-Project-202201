@@ -12,6 +12,7 @@ const StyledCharacter = styled.li`
   width: 285px;
   height: 65px;
   background-color: rgb(90, 90, 90);
+  cursor: pointer;
 
   .name-section {
     display: flex;

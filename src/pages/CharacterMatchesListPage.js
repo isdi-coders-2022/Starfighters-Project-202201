@@ -27,7 +27,7 @@ const CharacterMatchesListPage = () => {
     <>
       <StarFightersBox className="list-unstyled">
         {myFighters.map((fighter) => (
-          <>
+          <div key={fighter.id} className="matches-card">
             <CharacterListComponent
               key={fighter.id}
               fighter={fighter}
@@ -43,7 +43,7 @@ const CharacterMatchesListPage = () => {
               src="Cross"
               alt="Delete fighter from your matches list"
             />
-          </>
+          </div>
         ))}
       </StarFightersBox>
     </>

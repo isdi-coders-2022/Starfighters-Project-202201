@@ -28,11 +28,17 @@ const CharacterListPage = () => {
     <>
       <ButtonText
         text={"Filter by humans"}
+        className="filter-button"
         onClickAction={() => filterFighters("human")}
+      />
+      <ButtonText
+        text={"Filter by droids"}
+        className="filter-button"
+        onClickAction={() => filterFighters("droid")}
       />
       <StarFightersBox className="list-unstyled">
         {starFighters.map((fighter) => (
-          <>
+          <div className="character-card">
             <CharactersListComponent
               key={fighter.id}
               fighter={fighter}
@@ -47,8 +53,8 @@ const CharacterListPage = () => {
               }}
               src="add"
               alt="Add character"
-            ></ButtonImage>
-          </>
+            />
+          </div>
         ))}
       </StarFightersBox>
     </>
