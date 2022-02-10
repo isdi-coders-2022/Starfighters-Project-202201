@@ -1,5 +1,9 @@
 @import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
 
+* {
+  z-index: 100;
+}
+
 body {
   margin: 0;
   background-color: rgb(35, 35, 35);

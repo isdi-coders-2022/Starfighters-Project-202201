@@ -30,6 +30,16 @@ const TitleStar = styled.h1`
   }
 `;
 
+const StyledDiv = styled.div`
+  width: 100vw;
+  height: 100px;
+  background-color: yellow;
+  transform: skew(344deg, 328deg);
+  z-index: -100;
+  bottom: -60px;
+  position: fixed;
+`;
+
 function App() {
   const { loadFightersAPI } = usePublicAPI();
   const { loadMyFighters } = useStarAPI();
@@ -41,6 +51,7 @@ function App() {
 
   return (
     <>
+      <StyledDiv className="fat-div"></StyledDiv>
       <main className="main row col-12" name="main">
         <header className="header col-12">
           <nav className="navigation col-12">
@@ -79,6 +90,7 @@ function App() {
               alt="Fighters"
             />
           </TitleStar>
+
           <Routes>
             <Route path="/*" element={<HomePage />}></Route>
             <Route path="/home" element={<HomePage />}></Route>
