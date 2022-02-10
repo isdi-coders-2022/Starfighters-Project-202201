@@ -2,7 +2,7 @@
 
 exports[`Given a CharacterDetailsComponent component When executing the component Then it should render 1`] = `
 <div
-  className="character-details"
+  className="sc-bdvvtL jFChNI character-details"
 >
   <img
     alt="character profile"
@@ -10,6 +10,7 @@ exports[`Given a CharacterDetailsComponent component When executing the componen
     src="https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg"
     width="400"
   />
+  <div />
   <h2
     className="character-details__name"
   >
