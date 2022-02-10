@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
 import StarContext from "../store/contexts/StarContext/StarContext";
 import { useParams } from "react-router-dom";
+import { addFighterAPI } from "../hooks/useStarAPI";
 
 const CharacterUpdaterFormPage = () => {
   const { starFighters } = useContext(StarContext);
@@ -23,7 +24,7 @@ const CharacterUpdaterFormPage = () => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    // addGentlemanAPI(formData);
+    addFighterAPI(formData);
     resetForm();
   };
 
