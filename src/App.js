@@ -7,7 +7,6 @@ import styled from "styled-components";
 import Error from "./components/ErrorComponent/ErrorComponent";
 import CharacterMatchesListPage from "./pages/CharacterMatchesListPage";
 import usePublicAPI from "./hooks/usePublicAPI";
-import useStarAPI from "./hooks/useStarAPI";
 import { useEffect } from "react";
 
 const TitleStar = styled.h1`
@@ -33,7 +32,6 @@ const TitleStar = styled.h1`
 
 function App() {
   const { loadFightersAPI } = usePublicAPI();
-  const { loadFighters } = useStarAPI();
 
   useEffect(() => {
     loadFightersAPI();
