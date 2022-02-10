@@ -46,7 +46,7 @@ function App() {
           <nav className="navigation col-12">
             <ul className="navigation__list list-unstyled">
               <li className="navigation__list__matches">
-                <Link to="/character-list">
+                <Link to="/character-list" onClick={loadFightersAPI}>
                   <img src="/icons/Search.png" alt=""></img>
                 </Link>
               </li>

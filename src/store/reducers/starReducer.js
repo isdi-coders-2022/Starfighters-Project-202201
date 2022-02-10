@@ -10,7 +10,7 @@ const starReducer = (currentStarFighters, action) => {
 
     case actionTypes.filterFighters:
       newStarFighters = currentStarFighters.filter(
-        (fighter) => fighter.species === "human"
+        (fighter) => fighter.species === action.species
       );
       break;
 
