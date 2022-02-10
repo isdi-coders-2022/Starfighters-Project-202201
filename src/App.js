@@ -5,6 +5,7 @@ import CharacterListPage from "./pages/CharacterListPage";
 import HomePage from "./pages/HomePage";
 import styled from "styled-components";
 import Error from "./components/ErrorComponent/ErrorComponent";
+import CharacterMatchesListPage from "./pages/CharacterMatchesListPage";
 
 const TitleStar = styled.h1`
   color: yellow;
@@ -37,6 +38,9 @@ function App() {
               <li className="navigation__list__matches">
                 <Link to="/character-list">Character List</Link>;
               </li>
+              <li className="navigation__list__matches">
+                <Link to="/character-matches">Character Matches</Link>;
+              </li>
               <li className="navigation__list__create">
                 <Link to="/character-creator">Create</Link>;
               </li>
@@ -61,6 +65,10 @@ function App() {
             <Route path="/*" element={<Error />}></Route>
             <Route path="/home" element={<HomePage />}></Route>
             <Route path="/character-list" element={<CharacterListPage />} />
+            <Route
+              path="/character-matches"
+              element={<CharacterMatchesListPage />}
+            />
             <Route
               path="/character-details/:id"
               element={<CharacterDetailsPage />}
