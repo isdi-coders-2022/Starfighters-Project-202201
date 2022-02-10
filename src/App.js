@@ -4,9 +4,14 @@ import CharacterDetailsPage from "./pages/CharacterDetailsPage";
 import CharacterListPage from "./pages/CharacterListPage";
 import HomePage from "./pages/HomePage";
 import styled from "styled-components";
+
 import { useEffect } from "react";
 import usePublicAPI from "./hooks/usePublicAPI";
 import useStarAPI from "./hooks/useStarAPI";
+
+import Error from "./components/ErrorComponent/ErrorComponent";
+import CharacterMatchesListPage from "./pages/CharacterMatchesListPage";
+
 
 const TitleStar = styled.h1`
   color: yellow;
@@ -15,10 +20,17 @@ const TitleStar = styled.h1`
   flex-direction: column;
   align-items: center;
 
-  img {
+  .star {
     display: flex;
-    margin: 10px;
-    width: 30vw;
+    margin: 5px;
+    width: 205px;
+    height: 40px;
+  }
+  .fighters {
+    display: flex;
+    margin: 5px;
+    width: 280px;
+    height: 40px;
   }
 `;
 
@@ -38,6 +50,9 @@ function App() {
             <ul className="navigation__list list-unstyled">
               <li className="navigation__list__matches">
                 <Link to="/character-list">Character List</Link>;
+              </li>
+              <li className="navigation__list__matches">
+                <Link to="/character-matches">Character Matches</Link>;
               </li>
               <li className="navigation__list__create">
                 <Link to="/character-creator">Create</Link>;
@@ -60,8 +75,13 @@ function App() {
             />
           </TitleStar>
           <Routes>
-            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/*" element={<Error />}></Route>
+            <Route path="/home" element={<HomePage />}></Route>
             <Route path="/character-list" element={<CharacterListPage />} />
+            <Route
+              path="/character-matches"
+              element={<CharacterMatchesListPage />}
+            />
             <Route
               path="/character-details/:id"
               element={<CharacterDetailsPage />}
