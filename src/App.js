@@ -46,6 +46,10 @@ function App() {
               path="/character-creator"
               element={<CharacterCreatorFormPage />}
             />
+            <Route
+              path="/character-updater/:id"
+              element={<CharacterCreatorFormPage />}
+            />
           </Routes>
         </header>
       </main>
