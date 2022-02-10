@@ -4,14 +4,27 @@ import CharacterDetailsPage from "./pages/CharacterDetailsPage";
 import CharacterListPage from "./pages/CharacterListPage";
 import HomePage from "./pages/HomePage";
 import styled from "styled-components";
+import Error from "./components/ErrorComponent/ErrorComponent";
 
 const TitleStar = styled.h1`
-  font-family: "Star Jedi";
   color: yellow;
-  font-size: 70px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .star {
+    display: flex;
+    margin: 5px;
+    width: 205px;
+    height: 40px;
+  }
+  .fighters {
+    display: flex;
+    margin: 5px;
+    width: 280px;
+    height: 40px;
+  }
 `;
 
 function App() {
@@ -33,10 +46,20 @@ function App() {
             </ul>
           </nav>
           <TitleStar className="header__logo">
-            Star <span className="heading-breaker"></span> Fighters
+            <img
+              className="star"
+              src="/images/text-1644143571928.png"
+              alt="Star"
+            />
+            <img
+              className="fighters"
+              src="/images/text-1644143563620.png"
+              alt="Fighters"
+            />
           </TitleStar>
           <Routes>
-            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/*" element={<Error />}></Route>
+            <Route path="/home" element={<HomePage />}></Route>
             <Route path="/character-list" element={<CharacterListPage />} />
             <Route
               path="/character-details/:id"
