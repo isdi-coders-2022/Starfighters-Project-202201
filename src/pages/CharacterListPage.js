@@ -12,7 +12,6 @@ const StarFightersBox = styled.ul`
 `;
 const CharacterListPage = () => {
   const { starFighters } = useContext(StarContext);
-
   let navigate = useNavigate();
   let goToPage = (id) => {
     navigate(`/character-details/${id}`);
