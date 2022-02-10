@@ -41,6 +41,7 @@ const CharacterMatchesListPage = () => {
                 deleteFighterAPI(fighter.id);
               }}
               src="Cross"
+              alt="Delete fighter from your matches list"
             />
           </>
         ))}

@@ -5,6 +5,8 @@ import StarContext from "../store/contexts/StarContext/StarContext";
 import styled from "styled-components";
 import ButtonText from "../components/ButtonTextComponent/ButtonComponent/ButtonTextComponent";
 import usePublicAPI from "../hooks/usePublicAPI";
+import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
+import useStarAPI from "../hooks/useStarAPI";
 
 const StarFightersBox = styled.ul`
   display: flex;
@@ -17,6 +19,7 @@ const StarFightersBox = styled.ul`
 const CharacterListPage = () => {
   const { starFighters } = useContext(StarContext);
   const { filterFighters } = usePublicAPI();
+  const { addFighterAPI } = useStarAPI();
 
   let navigate = useNavigate();
   let goToPage = (id) => {
@@ -30,13 +33,23 @@ const CharacterListPage = () => {
       />
       <StarFightersBox className="list-unstyled">
         {starFighters.map((fighter) => (
-          <CharactersListComponent
-            key={fighter.id}
-            fighter={fighter}
-            actionOnClick={() => {
-              goToPage(fighter.id);
-            }}
-          />
+          <>
+            <CharactersListComponent
+              key={fighter.id}
+              fighter={fighter}
+              actionOnClick={() => {
+                goToPage(fighter.id);
+              }}
+            />
+            <ButtonImage
+              type="submit"
+              onClickAction={() => {
+                addFighterAPI(fighter);
+              }}
+              src={"Confirm"}
+              alt={"Add character"}
+            ></ButtonImage>
+          </>
         ))}
       </StarFightersBox>
     </>
