@@ -16,7 +16,9 @@ const StarFightersBox = styled.ul`
 
 const CharacterMatchesListPage = () => {
   const { myFighters } = useContext(StarContext);
+
   const { deleteFighterAPI } = useStarAPI();
+
 
   let navigate = useNavigate();
   let goToPage = (id) => {
@@ -26,6 +28,7 @@ const CharacterMatchesListPage = () => {
     <>
       <StarFightersBox className="list-unstyled">
         {myFighters.map((fighter) => (
+
           <>
             <CharacterListComponent
               key={fighter.id}
@@ -40,6 +43,7 @@ const CharacterMatchesListPage = () => {
               src="Cross"
             />
           </>
+
         ))}
       </StarFightersBox>
     </>
