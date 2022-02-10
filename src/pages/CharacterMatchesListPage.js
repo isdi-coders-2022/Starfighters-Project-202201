@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import CharactersListComponent from "../components/CharacterListComponent/CharacterListComponent";
+import CharacterListComponent from "../components/CharacterListComponent/CharacterListComponent";
 import StarContext from "../store/contexts/StarContext/StarContext";
 import styled from "styled-components";
+import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
+import useStarAPI from "../hooks/useStarAPI";
 
 const StarFightersBox = styled.ul`
   display: flex;
@@ -15,6 +17,8 @@ const StarFightersBox = styled.ul`
 const CharacterMatchesListPage = () => {
   const { myFighters } = useContext(StarContext);
 
+  const { deleteFighterAPI } = useStarAPI();
+
   let navigate = useNavigate();
   let goToPage = (id) => {
     navigate(`/character-details/${id}`);
@@ -23,13 +27,22 @@ const CharacterMatchesListPage = () => {
     <>
       <StarFightersBox className="list-unstyled">
         {myFighters.map((fighter) => (
-          <CharactersListComponent
-            key={fighter.id}
-            fighter={fighter}
-            actionOnClick={() => {
-              goToPage(fighter.id);
-            }}
-          />
+          <>
+            <CharacterListComponent
+              key={fighter.id}
+              fighter={fighter}
+              actionOnClick={() => {
+                goToPage(fighter.id);
+              }}
+            />
+            <ButtonImage
+              type="button"
+              onClickAction={() => {
+                deleteFighterAPI(fighter.id);
+              }}
+              src="Cross"
+            />
+          </>
         ))}
       </StarFightersBox>
     </>
