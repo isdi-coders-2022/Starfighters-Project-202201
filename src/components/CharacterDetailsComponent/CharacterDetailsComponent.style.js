@@ -3,10 +3,10 @@ import styled from "styled-components";
 const CharacterDetailsBox = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 
-  div {
+  .light-div {
     width: 151vw;
     height: 100px;
     background-color: yellow;
@@ -16,10 +16,10 @@ const CharacterDetailsBox = styled.div`
     position: fixed;
   }
   h2 {
-    background-color: rgba(54, 52, 52, 0.7);
     border-radius: 20px;
     font-weight: 600;
     font-size: 35px;
+    text-align: center;
   }
   img {
     width: 150px;
@@ -35,6 +35,20 @@ const CharacterDetailsBox = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  @media (min-width: 700px) {
+    display: flex;
+    flex-direction: row;
+
+    h2 {
+      background-color: rgba(54, 52, 52, 0.7);
+      border: 2px solid yellow;
+    }
+
+    img {
+      width: 240px;
+    }
   }
 `;
 export default CharacterDetailsBox;
