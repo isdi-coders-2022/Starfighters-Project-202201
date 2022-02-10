@@ -1,297 +1,124 @@
-const FilterSpecies = () => {
-  return (
-    <div class="dropdown">
-      <button
-        class="btn btn-secondary dropdown-toggle"
-        type="button"
-        id="dropdownMenuButton1"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li>
-          <a class="dropdown-item" href="#">
-            Tatooine
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Naboo
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Alderaan
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Stewjon
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Eriadu
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Nashyyyk
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Corellia
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Rodia
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Bestine
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Kamino
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Trandosha
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Socorro
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Bespin
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Mon Cala
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Chandrila
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Endor
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Sullust
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Coruscant
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Neimoida
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Toydaria
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Malastare
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Dathomir
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Ryloth
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Vulpter
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Troiken
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Tund
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Haruun Kal
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Cerea
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Quermia
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Glee Anselm
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Iktotch
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Concor Dawn
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Dorin
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Champala
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Geonosis
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Mirial
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Serenno
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Yavin 4
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Umbara
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Ojom
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Skako
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Zolan
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Shili
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Kalee
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Parnassos
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Utapau
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Jakku
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Scipio
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Nar Shaddaa
-          </a>
-        </li>
-      </ul>
-    </div>
-  );
-};
-
 const FilterPlanets = () => {
   return (
-    <div class="dropdown">
+    <div className="dropdown">
       <button
-        class="btn btn-secondary dropdown-toggle"
+        className="btn btn-secondary dropdown-toggle"
         type="button"
         id="dropdownMenuButton1"
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        Dropdown button
+        Filter by planet
       </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li>
-          <a class="dropdown-item" href="#">
-            Action
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Another action
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            Something else here
-          </a>
-        </li>
+      <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li>Tatooine</li>
+        <li>Naboo</li>
+        <li>Alderaan</li>
+        <li>Stewjon</li>
+        <li>Eriadu</li>
+        <li>Nashyyyk</li>
+        <li>Corellia</li>
+        <li>Rodia</li>
+        <li>Bestine</li>
+        <li>Kamino</li>
+        <li>Trandosha</li>
+        <li>Socorro</li>
+        <li>Bespin</li>
+        <li>Mon Cala</li>
+        <li>Chandrila</li>
+        <li>Endor</li>
+        <li>Sullust</li>
+        <li>Coruscant</li>
+        <li>Neimoida</li>
+        <li>Toydaria</li>
+        <li>Malastare</li>
+        <li>Dathomir</li>
+        <li>Ryloth</li>
+        <li>Vulpter</li>
+        <li>Troiken</li>
+        <li>Tund</li>
+        <li>Haruun Kal</li>
+        <li>Cerea</li>
+        <li>Quermia</li>
+        <li>Glee Anselm</li>
+        <li>Iktotch</li>
+        <li>Concor Dawn</li>
+        <li>Dorin</li>
+        <li>Champala</li>
+        <li>Geonosis</li>
+        <li>Mirial</li>
+        <li>Serenno</li>
+        <li>Yavin 4</li>
+        <li>Umbara</li>
+        <li>Ojom</li>
+        <li>Skako</li>
+        <li>Zolan</li>
+        <li>Shili</li>
+        <li>Kalee</li>
+        <li>Parnassos</li>
+        <li>Utapau</li>
+        <li>Jakku</li>
+        <li>Scipio</li>
+        <li>Nar Shaddaa</li>
       </ul>
     </div>
   );
 };
 
-export default FilterSpecies;
+const FilterSpecies = () => {
+  return (
+    <div className="dropdown">
+      <button
+        className="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Filter by species
+      </button>
+      <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li>Twi'lek</li>
+        <li>Aleena</li>
+        <li>Vulptereen</li>
+        <li>Toydarian</li>
+        <li>Dug</li>
+        <li>Mon Calamari</li>
+        <li>Humans</li>
+        <li>Droid</li>
+        <li>Hutt</li>
+        <li>Wookiee</li>
+        <li>Rodian</li>
+        <li>Trandoshan</li>
+        <li>Dathomirian Zabrak</li>
+        <li>Ewook</li>
+        <li>Sullustan</li>
+        <li>Neimodian</li>
+        <li>Gungan</li>
+        <li>Xexto</li>
+        <li>Tund</li>
+        <li>Cerean</li>
+        <li>Nautolan</li>
+        <li>Iridonian Zabrak</li>
+        <li>Tholothian</li>
+        <li>Iktotchi</li>
+        <li>Pau'an</li>
+        <li>Kel Dor</li>
+        <li>Chagrian</li>
+        <li>Geonosian</li>
+        <li>Mirialan</li>
+        <li>Clawdite</li>
+        <li>Besalisk</li>
+        <li>Kaminoan</li>
+        <li>Skakoan</li>
+        <li>Muun</li>
+        <li>Togruta</li>
+        <li>Kaleesh</li>
+        <li>Umbaran</li>
+        <li>Quermian</li>
+      </ul>
+    </div>
+  );
+};
+
+export { FilterSpecies, FilterPlanets };

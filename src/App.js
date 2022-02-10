@@ -4,6 +4,11 @@ import CharacterDetailsPage from "./pages/CharacterDetailsPage";
 import CharacterListPage from "./pages/CharacterListPage";
 import HomePage from "./pages/HomePage";
 import styled from "styled-components";
+import {
+  FilterPlanets,
+  FilterSpecies,
+} from "./components/FilterComponent/FilterComponent";
+import { Dropdown } from "bootstrap";
 
 const TitleStar = styled.h1`
   color: yellow;
@@ -42,8 +47,11 @@ function App() {
               <li className="navigation__list__profile">
                 <Link to="/home">Home</Link>;
               </li>
+              <FilterSpecies />
+              <FilterPlanets />
             </ul>
           </nav>
+
           <TitleStar className="header__logo">
             <img
               className="star"
