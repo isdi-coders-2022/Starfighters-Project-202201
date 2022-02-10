@@ -34,7 +34,7 @@ const CharacterCreatorFormPage = () => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    formData.id = starFighters.length + 12;
+    formData.id = starFighters.length + 20;
     addFighterAPI(formData);
     resetForm();
   };
