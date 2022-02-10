@@ -52,7 +52,6 @@ const CharacterCreatorFormPage = () => {
 
   return (
     <>
-      <h2> Returning Character Creator Form Page</h2>
       <form
         className="new-character"
         onSubmit={onFormSubmit}
