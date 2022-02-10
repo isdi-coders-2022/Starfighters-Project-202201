@@ -1,16 +1,16 @@
 import { render, screen } from "@testing-library/react";
-import CharacterDetailsPage from "../pages/CharacterDetailsPage";
 import StarContextProvider from "../store/contexts/StarContext/StarContextProvider";
+import CharacterCreatorFormPage from "../pages/CharacterCreatorFormPage";
 
 describe("Given a CharacterCreatorFormPage function", () => {
   describe("When invoked", () => {
     test("Then it should render a form", () => {
       render(
         <StarContextProvider>
-          <CharacterDetailsPage />
+          <CharacterCreatorFormPage />
         </StarContextProvider>
       );
-      const element = screen.getByRole("img");
+      const element = screen.getByText("Image:");
 
       expect(element).toBeInTheDocument();
     });
