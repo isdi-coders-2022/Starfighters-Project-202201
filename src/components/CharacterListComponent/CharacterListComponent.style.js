@@ -26,23 +26,35 @@ const StyledCharacter = styled.li`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 145px;
+    height: 43px;
   }
 
   p {
     margin: 0;
+    font-size: 12px;
+    text-justify: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
 
   h2 {
-    font-size: 16px;
+    font-size: 14px;
+    text-justify: center;
   }
 
   img {
     object-fit: cover;
     object-position: top;
-    height: 63px;
+    height: 62px;
     width: 65px;
-    border: 2px solid yellow;
+    border: 1px solid rgb(14, 21, 56);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     background-color: rgba(236, 240, 162, 0.8);
+    margin-right: 40px;
   }
 `;
 
