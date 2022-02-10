@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import styled from "styled-components";
 import { useEffect } from "react";
 import usePublicAPI from "./hooks/usePublicAPI";
+import useStarAPI from "./hooks/useStarAPI";
 
 const TitleStar = styled.h1`
   color: yellow;
@@ -23,6 +24,7 @@ const TitleStar = styled.h1`
 
 function App() {
   const { loadFightersAPI } = usePublicAPI();
+  const { loadFighters } = useStarAPI();
 
   useEffect(() => {
     loadFightersAPI();

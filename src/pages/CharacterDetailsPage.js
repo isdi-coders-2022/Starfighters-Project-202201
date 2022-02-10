@@ -8,7 +8,7 @@ import StarContext from "../store/contexts/StarContext/StarContext";
 
 const CharacterDetailsPage = () => {
   const { id } = useParams();
-  const { starFighters, fighter } = useContext(StarContext);
+  const { fighter } = useContext(StarContext);
   const { loadFighter } = useStarAPI();
 
   useEffect(() => {
