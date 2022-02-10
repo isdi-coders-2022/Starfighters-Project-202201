@@ -7,19 +7,9 @@ const CharacterUpdaterFormPage = () => {
   const { starFighters } = useContext(StarContext);
   const { id } = useParams();
 
-  const blankFields = {
-    name: "",
-    height: "",
-    mass: "",
-    gender: "",
-    homeworld: "",
-    species: "",
-    affiliation: "",
-    master: "",
-    image: "",
-  };
+  const fighter = starFighters.find((fighter) => fighter.id === id);
 
-  const [formData, setFormData] = useState(blankFields);
+  const [formData, setFormData] = useState();
 
   const changeData = (event) => {
     setFormData({
@@ -38,7 +28,7 @@ const CharacterUpdaterFormPage = () => {
   };
 
   const resetForm = () => {
-    setFormData(blankFields);
+    setFormData(fighter);
   };
 
   const isFilled =
@@ -67,7 +57,7 @@ const CharacterUpdaterFormPage = () => {
             type="text"
             id="name"
             className="form-input"
-            value={formData.name}
+            value={fighter.name}
             onChange={changeData}
           />
         </div>
@@ -77,7 +67,7 @@ const CharacterUpdaterFormPage = () => {
             type="number"
             id="height"
             className="form-input"
-            value={formData.height}
+            value={fighter.height}
             onChange={changeData}
           />
         </div>
@@ -87,7 +77,7 @@ const CharacterUpdaterFormPage = () => {
             type="number"
             id="mass"
             className="form-input"
-            value={formData.mass}
+            value={fighter.mass}
             onChange={changeData}
           />
         </div>
@@ -97,7 +87,7 @@ const CharacterUpdaterFormPage = () => {
             type="text"
             id="gender"
             className="form-input"
-            value={formData.gender}
+            value={fighter.gender}
             onChange={changeData}
           />
         </div>
@@ -107,7 +97,7 @@ const CharacterUpdaterFormPage = () => {
             type="text"
             id="homeworld"
             className="form-input"
-            value={formData.homeworld}
+            value={fighter.homeworld}
             onChange={changeData}
           />
         </div>
@@ -117,7 +107,7 @@ const CharacterUpdaterFormPage = () => {
             type="text"
             id="species"
             className="form-input"
-            value={formData.species}
+            value={fighter.species}
             onChange={changeData}
           />
         </div>
@@ -127,7 +117,7 @@ const CharacterUpdaterFormPage = () => {
             type="text"
             id="affiliation"
             className="form-input"
-            value={formData.affiliation}
+            value={fighter.affiliation}
             onChange={changeData}
           />
         </div>
@@ -137,7 +127,7 @@ const CharacterUpdaterFormPage = () => {
             type="text"
             id="master"
             className="form-input"
-            value={formData.master}
+            value={fighter.master}
             onChange={changeData}
           />
         </div>
@@ -147,7 +137,7 @@ const CharacterUpdaterFormPage = () => {
             type="url"
             id="image"
             className="form-input"
-            value={formData.image}
+            value={fighter.image}
             onChange={changeData}
           />
         </div>
