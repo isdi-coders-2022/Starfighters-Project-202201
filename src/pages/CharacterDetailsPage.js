@@ -11,7 +11,7 @@ const CharacterDetailsPage = () => {
 
   useEffect(() => {
     loadFighter(id);
-  }, [loadFighter]);
+  }, [id, loadFighter]);
 
   return (
     <>
