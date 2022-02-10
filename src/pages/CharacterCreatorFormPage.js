@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
 import useStarAPI from "../hooks/useStarAPI";
+import StarContext from "../store/contexts/StarContext/StarContext";
 
 const CharacterCreatorFormPage = () => {
   const { addFighterAPI } = useStarAPI();
+  const { starFighters } = useContext(StarContext);
 
   const blankFields = {
     name: "",
@@ -31,6 +33,7 @@ const CharacterCreatorFormPage = () => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
+    formData.id = starFighters.length + 12;
     addFighterAPI(formData);
     resetForm();
   };

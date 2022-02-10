@@ -22,7 +22,10 @@ const useStarAPI = () => {
 
   const loadFighter = useCallback(
     async (id) => {
-      const apiUrl = `${process.env.REACT_APP_API_FIGHTER}${id}.json`;
+      let apiUrl = `${process.env.REACT_APP_API_FIGHTER}${id}.json`;
+      if (id >= 90) {
+        apiUrl = `${process.env.REACT_APP_API_URL}/${id}`;
+      }
       try {
         const response = await fetch(apiUrl);
         const fighter = await response.json();
