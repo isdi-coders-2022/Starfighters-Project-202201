@@ -2,6 +2,7 @@ import { Route, Routes, Link } from "react-router-dom";
 import CharacterCreatorFormPage from "./pages/CharacterCreatorFormPage";
 import CharacterDetailsPage from "./pages/CharacterDetailsPage";
 import CharacterListPage from "./pages/CharacterListPage";
+import CharacterUpdaterFormPage from "./pages/CharacterUpdaterFormPage";
 import HomePage from "./pages/HomePage";
 import styled from "styled-components";
 
@@ -48,7 +49,7 @@ function App() {
             />
             <Route
               path="/character-updater/:id"
-              element={<CharacterCreatorFormPage />}
+              element={<CharacterUpdaterFormPage />}
             />
           </Routes>
         </header>
