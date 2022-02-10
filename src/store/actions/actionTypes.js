@@ -4,5 +4,6 @@ const actionTypes = {
   addFighter: "add-fighter",
   updateFighter: "update-fighter",
   loadFighter: "load-fighter",
+  filterFighters: "filter-fighters",
 };
 export default actionTypes;
