@@ -5,12 +5,7 @@ import userEvent from "@testing-library/user-event";
 describe("Given a ButtonText component", () => {
   describe("When it's rendered", () => {
     test("Then it should display a button with text 'Naboo'", () => {
-      render(
-        <ButtonImage
-          src="../components/ButtonImageComponent/Back.png"
-          alt="back"
-        />
-      );
+      render(<ButtonImage src="Back" alt="back" />);
 
       const buttonTest = screen.getByRole("img");
 
@@ -21,7 +16,7 @@ describe("Given a ButtonText component", () => {
     test("Then it should call the action", () => {
       const action = jest.fn();
 
-      render(<ButtonImage onClickAction={action} />);
+      render(<ButtonImage onClickAction={action} src="Cross" alt="Delete" />);
 
       userEvent.click(screen.queryByRole("button"));
 
