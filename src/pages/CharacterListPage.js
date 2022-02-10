@@ -11,7 +11,7 @@ const CharacterListPage = () => {
 
   useEffect(() => {
     loadFightersAPI();
-  }, [loadFightersAPI]);
+  ()}, [loadFightersAPI]);
 
   const StarFightersBox = styled.ul`
     display: flex;
