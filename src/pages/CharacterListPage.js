@@ -45,7 +45,7 @@ const CharacterListPage = () => {
               onClickAction={() => {
                 addFighterAPI(fighter);
               }}
-              src="Confirm"
+              src="add"
               alt="Add character"
             ></ButtonImage>
           </>
