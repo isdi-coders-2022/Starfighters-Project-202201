@@ -37,7 +37,7 @@ function App() {
   useEffect(() => {
     loadMyFighters();
     loadFightersAPI();
-  }, [loadFightersAPI]);
+  }, [loadFightersAPI, loadMyFighters]);
 
   return (
     <>
