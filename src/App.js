@@ -39,6 +39,15 @@ const StyledDiv = styled.div`
   bottom: -60px;
   position: fixed;
 `;
+const StyledThinDiv = styled.div`
+  width: 100vw;
+  height: 100px;
+  background-color: yellow;
+  transform: skew(307deg, 328deg);
+  z-index: -100;
+  bottom: 5px;
+  position: fixed;
+`;
 
 function App() {
   const { loadFightersAPI } = usePublicAPI();
@@ -52,6 +61,7 @@ function App() {
   return (
     <>
       <StyledDiv className="fat-div"></StyledDiv>
+      <StyledThinDiv></StyledThinDiv>
       <main className="main row col-12" name="main">
         <header className="header col-12">
           <nav className="navigation col-12">
