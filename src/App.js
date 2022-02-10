@@ -4,10 +4,10 @@ import CharacterDetailsPage from "./pages/CharacterDetailsPage";
 import CharacterListPage from "./pages/CharacterListPage";
 import HomePage from "./pages/HomePage";
 import styled from "styled-components";
-import Error from "./components/ErrorComponent/ErrorComponent";
 import CharacterMatchesListPage from "./pages/CharacterMatchesListPage";
 import usePublicAPI from "./hooks/usePublicAPI";
 import { useEffect } from "react";
+import useStarAPI from "./hooks/useStarAPI";
 
 const TitleStar = styled.h1`
   color: yellow;
@@ -32,8 +32,10 @@ const TitleStar = styled.h1`
 
 function App() {
   const { loadFightersAPI } = usePublicAPI();
+  const { loadMyFighters } = useStarAPI();
 
   useEffect(() => {
+    loadMyFighters();
     loadFightersAPI();
   }, [loadFightersAPI]);
 
@@ -70,7 +72,7 @@ function App() {
             />
           </TitleStar>
           <Routes>
-            <Route path="/*" element={<Error />}></Route>
+            <Route path="/*" element={<HomePage />}></Route>
             <Route path="/home" element={<HomePage />}></Route>
             <Route path="/character-list" element={<CharacterListPage />} />
             <Route

@@ -9,15 +9,16 @@ import StarContext from "../store/contexts/StarContext/StarContext";
 
 const useStarAPI = () => {
   const apiUrl = process.env.REACT_APP_API_URL;
-  const { dispatch, fighterDispatch } = useContext(StarContext);
+  const { myDispatch, fighterDispatch } = useContext(StarContext);
 
-  const loadFightersAPI = useCallback(async () => {
+  const loadMyFighters = useCallback(async () => {
     try {
       const response = await fetch(apiUrl);
       const fighters = await response.json();
-      dispatch(loadFightersAction(fighters));
+
+      myDispatch(loadFightersAction(fighters));
     } catch (error) {}
-  }, [apiUrl, dispatch]);
+  }, [apiUrl, myDispatch]);
 
   const loadFighter = useCallback(
     async (id) => {
@@ -39,7 +40,7 @@ const useStarAPI = () => {
         body: JSON.stringify(fighter),
       });
       const newFighter = await response.json();
-      dispatch(addFighterAction(newFighter));
+      myDispatch(addFighterAction(newFighter));
     } catch (error) {}
   };
 
@@ -47,7 +48,7 @@ const useStarAPI = () => {
     try {
       const response = await fetch(`${apiUrl}${id}`, { method: "DELETE" });
       if (response.ok) {
-        dispatch(deleteFighterAction(id));
+        myDispatch(deleteFighterAction(id));
       } else {
         throw new Error();
       }
@@ -55,7 +56,7 @@ const useStarAPI = () => {
   };
 
   return {
-    loadFightersAPI,
+    loadMyFighters,
     addFighterAPI,
     deleteFighterAPI,
     loadFighter,
