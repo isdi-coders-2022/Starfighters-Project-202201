@@ -1,20 +1,5 @@
 @import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-@font-face {
-  font-family: "Star Jedi";
-  src: url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.eot");
-  src: url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.eot?#iefix")
-      format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.woff2")
-      format("woff2"),
-    url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.woff")
-      format("woff"),
-    url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.ttf")
-      format("truetype"),
-    url("//db.onlinewebfonts.com/t/af7c07faaff0d16720c25db7990579e2.svg#Star Jedi")
-      format("svg");
-}
-
 body {
   margin: 0;
   background-color: rgb(35, 35, 35);
@@ -28,7 +13,7 @@ body {
   padding: 0;
 }
 
-container {
+.container {
   width: 80vw;
 }
 
