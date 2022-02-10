@@ -14,14 +14,11 @@ const CharactersListComponent = ({ fighter, actionOnClick, children }) => {
         <li className="character__info">
           <h2 className="character-list__name">{fighter.name}</h2>
           <p>
-            {fighter.species} <span></span>from: {` `}
+            {fighter.species} from: {` `}
             {typeof fighter.homeworld === "object"
               ? fighter.homeworld[0]
               : fighter.homeworld}
           </p>
-        </li>
-        <li>
-          <span></span>
         </li>
       </ul>
     </StyledCharacter>
