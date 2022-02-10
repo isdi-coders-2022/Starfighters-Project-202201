@@ -2,21 +2,38 @@ import { useCallback, useContext } from "react";
 import {
   addFighterAction,
   deleteFighterAction,
+  loadFighterAction,
   loadFightersAction,
 } from "../store/actions/actionCreators";
 import StarContext from "../store/contexts/StarContext/StarContext";
 
 const useStarAPI = () => {
   const apiUrl = process.env.REACT_APP_API_URL;
-  const { dispatch } = useContext(StarContext);
+  const { myDispatch, fighterDispatch } = useContext(StarContext);
 
-  const loadFightersAPI = useCallback(async () => {
+  const loadMyFighters = useCallback(async () => {
     try {
       const response = await fetch(apiUrl);
       const fighters = await response.json();
-      dispatch(loadFightersAction(fighters));
+
+      myDispatch(loadFightersAction(fighters));
     } catch (error) {}
-  }, [apiUrl, dispatch]);
+  }, [apiUrl, myDispatch]);
+
+  const loadFighter = useCallback(
+    async (id) => {
+      let apiUrl = `${process.env.REACT_APP_API_FIGHTER}${id}.json`;
+      if (id >= 90) {
+        apiUrl = `${process.env.REACT_APP_API_URL}/${id}`;
+      }
+      try {
+        const response = await fetch(apiUrl);
+        const fighter = await response.json();
+        fighterDispatch(loadFighterAction(fighter));
+      } catch (error) {}
+    },
+    [fighterDispatch]
+  );
 
   const addFighterAPI = async (fighter) => {
     try {
@@ -26,7 +43,7 @@ const useStarAPI = () => {
         body: JSON.stringify(fighter),
       });
       const newFighter = await response.json();
-      dispatch(addFighterAction(newFighter));
+      myDispatch(addFighterAction(newFighter));
     } catch (error) {}
   };
 
@@ -34,7 +51,7 @@ const useStarAPI = () => {
     try {
       const response = await fetch(`${apiUrl}${id}`, { method: "DELETE" });
       if (response.ok) {
-        dispatch(deleteFighterAction(id));
+        myDispatch(deleteFighterAction(id));
       } else {
         throw new Error();
       }
@@ -42,9 +59,10 @@ const useStarAPI = () => {
   };
 
   return {
-    loadFightersAPI,
+    loadMyFighters,
     addFighterAPI,
     deleteFighterAPI,
+    loadFighter,
   };
 };
 export default useStarAPI;

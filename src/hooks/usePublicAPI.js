@@ -1,5 +1,8 @@
 import { useCallback, useContext } from "react";
-import { loadFightersAction } from "../store/actions/actionCreators";
+import {
+  filterFightersAction,
+  loadFightersAction,
+} from "../store/actions/actionCreators";
 import StarContext from "../store/contexts/StarContext/StarContext";
 
 const usePublicAPI = () => {
@@ -14,12 +17,16 @@ const usePublicAPI = () => {
       const filteredFighters = fighters.filter(
         (fighter) => !noImage.includes(fighter.id)
       );
+
       dispatch(loadFightersAction(filteredFighters));
     } catch (error) {}
   }, [apiUrl, dispatch]);
-
+  const filterFighters = (species) => {
+    dispatch(filterFightersAction(species));
+  };
   return {
     loadFightersAPI,
+    filterFighters,
   };
 };
 export default usePublicAPI;

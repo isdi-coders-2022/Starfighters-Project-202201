@@ -15,17 +15,24 @@ const StyledCharacter = styled.li`
 
   .name-section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-right: 30px;
   }
+
+  .character__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   p {
     margin: 0;
   }
 
   h2 {
-    font-family: "Star Jedi";
     font-size: 16px;
   }
 

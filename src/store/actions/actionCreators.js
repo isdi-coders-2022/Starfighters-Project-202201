@@ -19,3 +19,13 @@ export const updateFighterAction = (fighter) => ({
   type: actionTypes.updateFighter,
   fighter,
 });
+
+export const loadFighterAction = (fighter) => ({
+  type: actionTypes.loadFighter,
+  fighter,
+});
+
+export const filterFightersAction = (species) => ({
+  type: actionTypes.filterFighters,
+  species,
+});

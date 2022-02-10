@@ -7,21 +7,11 @@ const starReducer = (currentStarFighters, action) => {
     case actionTypes.loadFighters:
       newStarFighters = [...action.starFighters];
       break;
-    case actionTypes.addFighter:
-      newStarFighters = [...currentStarFighters, action.fighter];
-      break;
-    case actionTypes.deleteFighter:
+
+    case actionTypes.filterFighters:
       newStarFighters = currentStarFighters.filter(
-        (starFighter) => starFighter.id !== action.id
+        (fighter) => fighter.species === "human"
       );
-      break;
-    case actionTypes.updateFighter:
-      newStarFighters = currentStarFighters.map((starFighter) => {
-        if (starFighter.id === action.fighter.id) {
-          return { ...action.fighter };
-        }
-        return { ...starFighter };
-      });
       break;
 
     default:

@@ -6,17 +6,22 @@ import styled from "styled-components";
 import useStarAPI from "../hooks/useStarAPI";
 import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
 
+
 const CharacterMatchesListPage = () => {
   const { starFighters } = useContext(StarContext);
   const { deleteFighterAPI } = useStarAPI();
 
-  const StarFightersBox = styled.ul`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid yellow;
-  `;
+const StarFightersBox = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid yellow;
+`;
+
+
+const CharacterMatchesListPage = () => {
+  const { myFighters } = useContext(StarContext);
 
   let navigate = useNavigate();
   let goToPage = (id) => {
@@ -25,6 +30,7 @@ const CharacterMatchesListPage = () => {
   return (
     <>
       <StarFightersBox className="list-unstyled">
+
         {starFighters.map((fighter) => (
           <>
             <CharactersListComponent
@@ -40,6 +46,7 @@ const CharacterMatchesListPage = () => {
               src="Cross"
             />
           </>
+
         ))}
       </StarFightersBox>
     </>
