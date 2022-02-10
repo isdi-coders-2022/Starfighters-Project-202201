@@ -15,7 +15,6 @@ const StarFightersBox = styled.ul`
   align-items: center;
   border: 2px solid yellow;
 `;
-
 const CharacterListPage = () => {
   const { starFighters } = useContext(StarContext);
   const { filterFighters } = usePublicAPI();
