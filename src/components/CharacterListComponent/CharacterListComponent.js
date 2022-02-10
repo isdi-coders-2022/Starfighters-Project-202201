@@ -2,17 +2,30 @@ import { StyledCharacter } from "./CharacterListComponent.style";
 const CharactersListComponent = ({ fighter, actionOnClick, children }) => {
   return (
     <StyledCharacter className="character" onClick={actionOnClick}>
-      <img
-        className="character-list__image"
-        alt="character profile"
-        src={fighter.image}
-        width="200"
-      />
-      <section className="name-section">
-        <h2 className="character-list__name">{fighter.name}</h2>
-        <p>Homeworld: {fighter.homeworld}</p>
-      </section>
-      {children}
+
+      <ul className="name-section list-unstyled">
+        <li>
+          <img
+            className="character-list__image"
+            alt="character profile"
+            src={fighter.image}
+            width="200"
+          />
+        </li>
+        <li className="character__info">
+          <h2 className="character-list__name">{fighter.name}</h2>
+          <p>
+            {fighter.species} <span></span>from: {` `}
+            {typeof fighter.homeworld === "object"
+              ? fighter.homeworld[0]
+              : fighter.homeworld}
+          </p>
+        </li>
+        <li>
+          <span></span>
+        </li>
+      </ul>
+
     </StyledCharacter>
   );
 };
