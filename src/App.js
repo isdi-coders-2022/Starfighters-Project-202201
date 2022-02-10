@@ -6,6 +6,8 @@ import HomePage from "./pages/HomePage";
 import styled from "styled-components";
 import Error from "./components/ErrorComponent/ErrorComponent";
 import CharacterMatchesListPage from "./pages/CharacterMatchesListPage";
+import usePublicAPI from "./hooks/usePublicAPI";
+import { useEffect } from "react";
 
 const TitleStar = styled.h1`
   color: yellow;
@@ -29,6 +31,12 @@ const TitleStar = styled.h1`
 `;
 
 function App() {
+  const { loadFightersAPI } = usePublicAPI();
+
+  useEffect(() => {
+    loadFightersAPI();
+  }, [loadFightersAPI]);
+
   return (
     <>
       <main className="main row col-12" name="main">
