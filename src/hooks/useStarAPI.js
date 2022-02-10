@@ -49,7 +49,7 @@ const useStarAPI = () => {
 
   const deleteFighterAPI = async (id) => {
     try {
-      const response = await fetch(`${apiUrl}${id}`, { method: "DELETE" });
+      const response = await fetch(`${apiUrl}/${id}`, { method: "DELETE" });
       if (response.ok) {
         myDispatch(deleteFighterAction(id));
       } else {
