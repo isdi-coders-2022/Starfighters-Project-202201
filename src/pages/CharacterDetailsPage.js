@@ -1,4 +1,6 @@
 //import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
 import CharactersDetailsComponent from "../components/CharacterDetailsComponent/CharacterDetailsComponent";
 
 const CharacterDetailsPage = () => {
@@ -42,11 +44,15 @@ const CharacterDetailsPage = () => {
     formerAffiliations: [],
   };
   //const { id } = useParams();
-
+  let navigate = useNavigate();
+  const goToPage = (id) => {
+    navigate(`/character-updater/${id}`);
+  };
   return (
     <>
       <h2> Returning Character Details Page</h2>;
       <div>
+        <ButtonImage onClickAction={goToPage} />
         <CharactersDetailsComponent fighter={fighter} />
       </div>
     </>
