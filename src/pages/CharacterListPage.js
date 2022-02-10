@@ -45,7 +45,7 @@ const CharacterListPage = () => {
       />
       <StarFightersBox className="list-unstyled">
         {starFighters.map((fighter) => (
-          <div className="character-card">
+          <div key={fighter.id} className="character-card">
             <CharactersListComponent
               key={fighter.id}
               fighter={fighter}
