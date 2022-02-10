@@ -24,7 +24,7 @@ describe("Given a CharacterListComponent,", () => {
           <CharactersListComponent fighter={fighter} />
         </BrowserRouter>
       );
-      const expectedOutput = screen.getByRole("listitem");
+      const expectedOutput = screen.getByRole("list");
 
       expect(expectedOutput).toBeInTheDocument();
     });
@@ -54,7 +54,7 @@ describe("Given a CharacterListComponent,", () => {
           />
         </BrowserRouter>
       );
-      userEvent.click(screen.queryByRole("listitem"));
+      userEvent.click(screen.queryByRole("list"));
 
       expect(mockFunction).toHaveBeenCalled();
     });
