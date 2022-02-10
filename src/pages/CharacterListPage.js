@@ -9,10 +9,6 @@ const CharacterListPage = () => {
   const { loadFightersAPI } = usePublicAPI();
   const { starFighters } = useContext(StarContext);
 
-  useEffect(() => {
-    loadFightersAPI();
-  ()}, [loadFightersAPI]);
-
   const StarFightersBox = styled.ul`
     display: flex;
     flex-direction: column;
