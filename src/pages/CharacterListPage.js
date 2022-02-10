@@ -16,7 +16,9 @@ const StarFightersBox = styled.ul`
 
 const CharacterListPage = () => {
   const { starFighters } = useContext(StarContext);
+
   const { filterFighters } = usePublicAPI();
+
 
   let navigate = useNavigate();
   let goToPage = (id) => {
