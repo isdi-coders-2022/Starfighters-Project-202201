@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
+import ButtonStyled from "./ButtonImageComponent.style";
 
 const ButtonImage = ({ type, onClickAction, src, alt }) => {
   return (
-    <button type={type} onClick={onClickAction}>
+    <ButtonStyled type={type} onClick={onClickAction}>
       <img src={`/icons/${src}.png`} alt={alt} />
-    </button>
+    </ButtonStyled>
   );
 };
 

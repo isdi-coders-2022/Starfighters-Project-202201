@@ -26,3 +26,25 @@ ul {
 .heading-breaker {
   display: block;
 }
+
+.navigation {
+  margin-top: 30px;
+}
+.header__logo {
+  margin-top: 75px;
+}
+.title {
+  text-align: center;
+  margin-top: 70px;
+}
+.start-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 240px;
+}
+.start-button {
+  width: 70px;
+  height: 70px;
+}

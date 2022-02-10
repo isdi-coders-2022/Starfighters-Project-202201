@@ -407,7 +407,7 @@ describe("Given a starReducer function", () => {
   });
 
   describe("When given a fighter and the updateFighter action", () => {
-    test("Then it should replacee the fighter with the same id", () => {
+    test("Then it should replace the fighter with the same id", () => {
       const fighter = {
         id: 3,
         name: "Robot",
