@@ -1,7 +1,10 @@
 import { useState } from "react";
 import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
+import useStarAPI from "../hooks/useStarAPI";
 
 const CharacterCreatorFormPage = () => {
+  const { addFighterAPI } = useStarAPI();
+
   const blankFields = {
     name: "",
     height: "",
@@ -28,7 +31,7 @@ const CharacterCreatorFormPage = () => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    // addGentlemanAPI(formData);
+    addFighterAPI(formData);
     resetForm();
   };
 
