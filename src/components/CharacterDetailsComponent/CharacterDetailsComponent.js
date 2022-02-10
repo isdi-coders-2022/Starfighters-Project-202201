@@ -1,12 +1,15 @@
+import CharacterDetailsBox from "./CharacterDetailsComponent.style";
+
 const CharactersDetailsComponent = ({ fighter }) => {
   return (
-    <div className="character-details">
+    <CharacterDetailsBox className="character-details">
       <img
         className="character-details__image"
         alt="character profile"
         src={fighter.image}
         width="400"
       />
+      <div></div>
       <h2 className="character-details__name">{fighter.name}</h2>
       <section className="character-details__info">
         <p>Height:{fighter.height}</p>
@@ -15,7 +18,7 @@ const CharactersDetailsComponent = ({ fighter }) => {
         <p>Species: {fighter.species}</p>
         <p>More info: {fighter.wiki}</p>
       </section>
-    </div>
+    </CharacterDetailsBox>
   );
 };
 
