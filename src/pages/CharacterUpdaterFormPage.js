@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
+import StarContext from "../store/contexts/StarContext/StarContext";
+import { useParams } from "react-router-dom";
 
-const CharacterCreatorFormPage = () => {
+const CharacterUpdaterFormPage = () => {
+  const { starFighters } = useContext(StarContext);
+  const { id } = useParams();
+
   const blankFields = {
     name: "",
     height: "",
@@ -157,4 +162,4 @@ const CharacterCreatorFormPage = () => {
   );
 };
 
-export default CharacterCreatorFormPage;
+export default CharacterUpdaterFormPage;

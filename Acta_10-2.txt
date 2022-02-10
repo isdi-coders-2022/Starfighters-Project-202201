@@ -1,0 +1,44 @@
+Adam:
+  Ayer:
+    -Bugfix de console.logs, classNames, quitó el App.test.
+    -Corregir el positioning del heading.
+    -Test de navigation list --> no salió bien.
+  Stopper:
+    -El navigation list y el test. Problemas con el mock.
+    -Centrado del texto en las cards.
+  Hoy:
+    -Estilos del characterDetail
+    -Hacer componente NotFound. + los catch que dirigen al error.
+    -Estilos de la Home. --> si no da tiempo cambiar el enrutado para que home sea character list.
+    -Readaptar con una media de mobile a desktop
+    -Cambiar fuentes por imágen png para que no tarde tanto en cargar
+    Future/feature:
+      -Paginado de los characters.
+
+
+Edgar:
+  Ayer:
+    -Custom hook api local
+    -Custom hook api pública
+    -Funciones del flux
+    -Corregir errores SonarQube
+    -Test de pages components
+  Stopper:
+    -SonarQube
+  Hoy:
+    -Asignar acciones a cada componente con funcionalidades de la API local
+    -Paginado de la lista de charcaters.
+    -Filtrado 
+
+Guillem:
+  Ayer:
+    -Test Button accesible --> 2 botones distintos
+    -Character Creator.
+    -Test details evitar tag html
+  Stoppers:
+    -Ruta imágen del botón.
+  Hoy:
+    -Asignar acciones a cada componente con funcionalidades de la API local (Modificar, crear, eliminar)
+    -Terminar botones y que funcionen
+    -Poner los botones en las páginas
+    -Página de matches
