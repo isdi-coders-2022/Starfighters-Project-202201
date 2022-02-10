@@ -16,9 +16,7 @@ const StarFightersBox = styled.ul`
 
 const CharacterListPage = () => {
   const { starFighters } = useContext(StarContext);
-
   const { filterFighters } = usePublicAPI();
-
 
   let navigate = useNavigate();
   let goToPage = (id) => {
@@ -28,7 +26,7 @@ const CharacterListPage = () => {
     <>
       <ButtonText
         text={"Filter by humans"}
-        actionOnClick={() => filterFighters("human")}
+        onClickAction={() => filterFighters("human")}
       />
       <StarFightersBox className="list-unstyled">
         {starFighters.map((fighter) => (
