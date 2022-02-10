@@ -6,9 +6,8 @@ import HomePage from "./pages/HomePage";
 import styled from "styled-components";
 
 const TitleStar = styled.h1`
-  font-family: "Star Jedi";
   color: yellow;
-  font-size: 70px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +32,16 @@ function App() {
             </ul>
           </nav>
           <TitleStar className="header__logo">
-            Star <span className="heading-breaker"></span> Fighters
+            <img
+              className="star"
+              src="public/images/text-1644143571928.png"
+              alt="Star"
+            />
+            <img
+              className="fighters"
+              src="public/images/text-1644143563620.png"
+              alt="Fighters"
+            />
           </TitleStar>
           <Routes>
             <Route path="/" element={<HomePage />}></Route>
