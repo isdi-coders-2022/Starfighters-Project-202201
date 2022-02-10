@@ -294,4 +294,4 @@ const FilterPlanets = () => {
   );
 };
 
-export default FilterComponent;
+export default FilterSpecies;
