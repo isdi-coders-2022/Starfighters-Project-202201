@@ -28,7 +28,7 @@ describe("Given a CharacterListPage function", () => {
           </StarContextProvider>
         </BrowserRouter>
       );
-      const element = screen.getByText("Filter by humans");
+      const element = screen.getByText("HUMANS");
 
       expect(element).toBeInTheDocument();
     });

@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
+import CreatorFormStyled from "../components/CreatorForm/CreatorForm.style";
 import useStarAPI from "../hooks/useStarAPI";
 import StarContext from "../store/contexts/StarContext/StarContext";
 
@@ -55,7 +56,7 @@ const CharacterCreatorFormPage = () => {
 
   return (
     <>
-      <form
+      <CreatorFormStyled
         className="new-character"
         onSubmit={onFormSubmit}
         autoComplete="off"
@@ -157,7 +158,7 @@ const CharacterCreatorFormPage = () => {
           src={"Confirm"}
           alt={"Create character"}
         ></ButtonImage>
-      </form>
+      </CreatorFormStyled>
     </>
   );
 };
