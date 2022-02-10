@@ -14,6 +14,7 @@ const usePublicAPI = () => {
       const filteredFighters = fighters.filter(
         (fighter) => !noImage.includes(fighter.id)
       );
+
       dispatch(loadFightersAction(filteredFighters));
     } catch (error) {}
   }, [apiUrl, dispatch]);

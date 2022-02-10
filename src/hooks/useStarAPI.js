@@ -2,13 +2,14 @@ import { useCallback, useContext } from "react";
 import {
   addFighterAction,
   deleteFighterAction,
+  loadFighterAction,
   loadFightersAction,
 } from "../store/actions/actionCreators";
 import StarContext from "../store/contexts/StarContext/StarContext";
 
 const useStarAPI = () => {
   const apiUrl = process.env.REACT_APP_API_URL;
-  const { dispatch } = useContext(StarContext);
+  const { dispatch, fighterDispatch } = useContext(StarContext);
 
   const loadFightersAPI = useCallback(async () => {
     try {
@@ -17,6 +18,18 @@ const useStarAPI = () => {
       dispatch(loadFightersAction(fighters));
     } catch (error) {}
   }, [apiUrl, dispatch]);
+
+  const loadFighter = useCallback(
+    async (id) => {
+      const apiUrl = `${process.env.REACT_APP_API_FIGHTER}${id}.json`;
+      try {
+        const response = await fetch(apiUrl);
+        const fighter = await response.json();
+        fighterDispatch(loadFighterAction(fighter));
+      } catch (error) {}
+    },
+    [fighterDispatch]
+  );
 
   const addFighterAPI = async (fighter) => {
     try {
@@ -45,6 +58,7 @@ const useStarAPI = () => {
     loadFightersAPI,
     addFighterAPI,
     deleteFighterAPI,
+    loadFighter,
   };
 };
 export default useStarAPI;
