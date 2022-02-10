@@ -11,6 +11,12 @@ const TitleStar = styled.h1`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  img {
+    display: flex;
+    margin: 10px;
+    width: 30vw;
+  }
 `;
 
 function App() {
@@ -34,12 +40,12 @@ function App() {
           <TitleStar className="header__logo">
             <img
               className="star"
-              src="public/images/text-1644143571928.png"
+              src="/images/text-1644143571928.png"
               alt="Star"
             />
             <img
               className="fighters"
-              src="public/images/text-1644143563620.png"
+              src="/images/text-1644143563620.png"
               alt="Fighters"
             />
           </TitleStar>
