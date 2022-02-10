@@ -27,13 +27,11 @@ const CharacterListPage = () => {
   return (
     <>
       <ButtonText
-        text={"Filter by humans"}
-        className="filter-button"
+        text={"HUMANS"}
         onClickAction={() => filterFighters("human")}
       />
       <ButtonText
-        text={"Filter by droids"}
-        className="filter-button"
+        text={"DROIDS"}
         onClickAction={() => filterFighters("droid")}
       />
       <StarFightersBox className="list-unstyled">

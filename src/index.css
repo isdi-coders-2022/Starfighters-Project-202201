@@ -58,3 +58,14 @@ ul {
 .matches-card {
   display: flex;
 }
+.cwGRdP {
+  margin-top: 15px;
+}
+.filter-button {
+  background: #232323;
+  color: #f6ff20;
+  border: 1px solid #f6ff20;
+  margin-left: 180px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
