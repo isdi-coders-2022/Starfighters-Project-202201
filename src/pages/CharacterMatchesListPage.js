@@ -11,7 +11,6 @@ const StarFightersBox = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid yellow;
 `;
 
 const CharacterMatchesListPage = () => {
