@@ -1,5 +1,5 @@
 import { StyledCharacter } from "./CharacterListComponent.style";
-const CharactersListComponent = ({ fighter, actionOnClick }) => {
+const CharactersListComponent = ({ fighter, actionOnClick, children }) => {
   return (
     <StyledCharacter className="character" onClick={actionOnClick}>
       <ul className="name-section list-unstyled">
