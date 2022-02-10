@@ -149,7 +149,7 @@ const CharacterCreatorFormPage = () => {
         <ButtonImage
           type="submit"
           disabled={!isFilled}
-          src={"../components/ButtonImageComponent/Confirm.png"}
+          src={"Confirm"}
           alt={"Create character"}
         ></ButtonImage>
       </form>
