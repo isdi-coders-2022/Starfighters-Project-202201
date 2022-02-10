@@ -13,7 +13,14 @@ const StarFightersBox = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid yellow;
+
+  @media (min-width: 700px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 const CharacterListPage = () => {
   const { starFighters } = useContext(StarContext);
