@@ -4,16 +4,16 @@ import CharactersListComponent from "../components/CharacterListComponent/Charac
 import StarContext from "../store/contexts/StarContext/StarContext";
 import styled from "styled-components";
 
-const CharacterMatchesListPage = () => {
-  const { starFighters } = useContext(StarContext);
+const StarFightersBox = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid yellow;
+`;
 
-  const StarFightersBox = styled.ul`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid yellow;
-  `;
+const CharacterMatchesListPage = () => {
+  const { myFighters } = useContext(StarContext);
 
   let navigate = useNavigate();
   let goToPage = (id) => {
@@ -22,7 +22,7 @@ const CharacterMatchesListPage = () => {
   return (
     <>
       <StarFightersBox className="list-unstyled">
-        {starFighters.map((fighter) => (
+        {myFighters.map((fighter) => (
           <CharactersListComponent
             key={fighter.id}
             fighter={fighter}
