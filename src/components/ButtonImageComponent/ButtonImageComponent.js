@@ -18,6 +18,7 @@ ButtonImage.propTypes = {
     "Forward",
     "MatchIcon",
     "Search",
+    "add",
   ]).isRequired,
 };
 
