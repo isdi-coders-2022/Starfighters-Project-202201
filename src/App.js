@@ -46,19 +46,24 @@ function App() {
           <nav className="navigation col-12">
             <ul className="navigation__list list-unstyled">
               <li className="navigation__list__matches">
-                <img src="/icons/MatchIcon.png"></img>
-                <Link to="/character-list">Character List</Link>
+                <Link to="/character-list">
+                  <img src="/icons/Search.png" alt=""></img>
+                </Link>
               </li>
               <li className="navigation__list__matches">
                 <Link to="/character-matches">
-                  <img src="/icons/MatchIcon.png"></img>
+                  <img src="/icons/MatchIcon.png" alt=""></img>
                 </Link>
               </li>
               <li className="navigation__list__create">
-                <Link to="/character-creator">Create</Link>;
+                <Link to="/character-creator">
+                  <img src="/icons/add.png" alt=""></img>
+                </Link>
               </li>
               <li className="navigation__list__profile">
-                <Link to="/home">Home</Link>;
+                <Link to="/home">
+                  <img src="/icons/home.png" alt=""></img>
+                </Link>
               </li>
             </ul>
           </nav>
