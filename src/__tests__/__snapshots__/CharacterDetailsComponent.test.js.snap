@@ -2,7 +2,7 @@
 
 exports[`Given a CharacterDetailsComponent component When executing the component Then it should render 1`] = `
 <div
-  className="sc-bdvvtL hbhmpE character-details"
+  className="sc-bdvvtL fwvDEh character-details"
 >
   <img
     alt="character profile"

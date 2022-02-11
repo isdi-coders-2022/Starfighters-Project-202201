@@ -44,6 +44,12 @@ const CharacterDetailsBox = styled.div`
     h2 {
       background-color: rgba(54, 52, 52, 0.7);
       border: 2px solid yellow;
+      margin-bottom: 10px;
+    }
+
+    section {
+      width: 400px;
+      height: 300px;
     }
 
     img {
