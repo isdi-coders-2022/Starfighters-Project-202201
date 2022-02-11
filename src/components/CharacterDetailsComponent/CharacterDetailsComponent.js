@@ -17,7 +17,9 @@ const CharactersDetailsComponent = ({ fighter }) => {
           <p>Mass: {fighter.mass}</p>
           <p>Homeworld: {fighter.homeworld}</p>
           <p>Species: {fighter.species}</p>
-          <p>More info: {fighter.wiki}</p>
+          <p>
+            <a href={fighter.wiki}>More info:</a>
+          </p>
         </section>
       </div>
     </CharacterDetailsBox>

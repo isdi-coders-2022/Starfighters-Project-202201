@@ -12,6 +12,10 @@ const StarFightersBox = styled.ul`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+    p {
+      font-size: 40px;
+    }
   }
 `;
 

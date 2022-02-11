@@ -41,8 +41,11 @@ exports[`Given a CharacterDetailsComponent component When executing the componen
         human
       </p>
       <p>
-        More info: 
-        http://starwars.wikia.com/wiki/Luke_Skywalker
+        <a
+          href="http://starwars.wikia.com/wiki/Luke_Skywalker"
+        >
+          More info:
+        </a>
       </p>
     </section>
   </div>
