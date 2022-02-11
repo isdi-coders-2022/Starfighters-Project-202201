@@ -2,16 +2,9 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import CharacterListComponent from "../components/CharacterListComponent/CharacterListComponent";
 import StarContext from "../store/contexts/StarContext/StarContext";
-import styled from "styled-components";
 import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
 import useStarAPI from "../hooks/useStarAPI";
-
-const StarFightersBox = styled.ul`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
+import StarFightersBox from "./StarFightersBoxUl.style";
 
 const CharacterMatchesListPage = () => {
   const { myFighters } = useContext(StarContext);

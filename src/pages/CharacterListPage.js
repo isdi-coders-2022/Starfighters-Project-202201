@@ -2,26 +2,12 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import CharactersListComponent from "../components/CharacterListComponent/CharacterListComponent";
 import StarContext from "../store/contexts/StarContext/StarContext";
-import styled from "styled-components";
 import ButtonText from "../components/ButtonTextComponent/ButtonComponent/ButtonTextComponent";
 import usePublicAPI from "../hooks/usePublicAPI";
 import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
 import useStarAPI from "../hooks/useStarAPI";
+import StarFightersBox from "./StarFightersBoxUl.style";
 
-const StarFightersBox = styled.ul`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  @media (min-width: 700px) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-`;
 const CharacterListPage = () => {
   const { starFighters } = useContext(StarContext);
   const { filterFighters } = usePublicAPI();
