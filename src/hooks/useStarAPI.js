@@ -8,7 +8,7 @@ import {
 import StarContext from "../store/contexts/StarContext/StarContext";
 
 const useStarAPI = () => {
-  const apiUrl = process.env.REACT_APP_API_URL;
+  let apiUrl = process.env.REACT_APP_API_URL;
   const { myDispatch, fighterDispatch } = useContext(StarContext);
 
   const loadMyFighters = useCallback(async () => {
@@ -22,7 +22,7 @@ const useStarAPI = () => {
 
   const loadFighter = useCallback(
     async (id) => {
-      let apiUrl = `${process.env.REACT_APP_API_FIGHTER}${id}.json`;
+      apiUrl = `${process.env.REACT_APP_API_FIGHTER}${id}.json`;
       if (id >= 90) {
         apiUrl = `${process.env.REACT_APP_API_URL}/${id}`;
       }

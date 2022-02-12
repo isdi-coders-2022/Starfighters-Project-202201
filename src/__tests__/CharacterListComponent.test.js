@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { BrowserRouter } from "react-router-dom";
-import CharactersListComponent from "../components/CharacterListComponent/CharacterListComponent";
+import CharactersListComponent from "../components/CharacterListComponent/CharactersListComponent";
 
 describe("Given a CharacterListComponent,", () => {
   describe("When it receives a fighter", () => {

@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
-import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
-import CreatorFormStyled from "../components/CreatorForm/CreatorForm.style";
+import ButtonImage from "../components/ButtonImage/ButtonImage";
+import CreatorFormStyled from "../components/CreatorForm/CreatorFormStyled";
+
 import useStarAPI from "../hooks/useStarAPI";
 import StarContext from "../store/contexts/StarContext/StarContext";
 

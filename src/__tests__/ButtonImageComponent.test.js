@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
+import ButtonImage from "../components/ButtonImage/ButtonImage";
 import userEvent from "@testing-library/user-event";
 
 describe("Given a ButtonText component", () => {

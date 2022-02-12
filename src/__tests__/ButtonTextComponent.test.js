@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import ButtonText from "../components/ButtonTextComponent/ButtonComponent/ButtonTextComponent";
+import ButtonText from "../components/ButtonText/ButtonText";
 import userEvent from "@testing-library/user-event";
 
 describe("Given a ButtonText component", () => {
@@ -17,7 +17,7 @@ describe("Given a ButtonText component", () => {
     test("Then it should call the action", () => {
       const action = jest.fn();
 
-      render(<ButtonText onClickAction={action} />);
+      render(<ButtonText onClickAction={action} text={"text"} />);
 
       userEvent.click(screen.queryByRole("button"));
 
