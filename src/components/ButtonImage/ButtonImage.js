@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import ButtonStyled from "./ButtonImageComponent.style";
+import ButtonStyled from "./ButtonStyled";
 
 const ButtonImage = ({ type, onClickAction, src, alt }) => {
   return (

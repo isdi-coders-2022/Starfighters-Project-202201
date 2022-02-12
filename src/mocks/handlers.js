@@ -14,7 +14,7 @@ export const handlers = [
             mass: 73,
             gender: "male",
             homeworld: "tatooine",
-            wiki: "http://starwars.wikia.com/wiki/Luke_Skywalker",
+            wiki: "https://starwars.wikia.com/wiki/Luke_Skywalker",
             image:
               "https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg",
             born: -19,
