@@ -1,4 +1,7 @@
+import { render } from "@testing-library/react";
 import actionTypes from "../actions/actionTypes";
+import ButtonText from "../components/ButtonText/ButtonText";
+import usePublicAPI from "../hooks/usePublicAPI";
 import starReducer from "./starReducer";
 
 describe("Given a starReducer function", () => {
