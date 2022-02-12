@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
-import CharactersDetailsComponent from "../components/CharacterDetailsComponent/CharacterDetailsComponent";
 import reactTestRenderer from "react-test-renderer";
+import CharactersDetailsComponent from "../components/CharacterDetailsComponent/CharactersDetailsComponent";
 
 describe("Given a CharacterDetailsComponent component", () => {
   describe("When it's rendered", () => {

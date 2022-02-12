@@ -3,21 +3,15 @@ import actionTypes from "../actions/actionTypes";
 const starReducer = (currentStarFighters, action) => {
   let newStarFighters;
 
-  switch (action.type) {
-    case actionTypes.loadFighters:
-      newStarFighters = [...action.starFighters];
-      break;
-
-    case actionTypes.filterFighters:
-      newStarFighters = currentStarFighters.filter(
-        (fighter) => fighter.species === action.species
-      );
-      break;
-
-    default:
-      newStarFighters = [...currentStarFighters];
+  if (action.type === actionTypes.loadFighters) {
+    newStarFighters = [...action.starFighters];
+  } else if (action.type === actionTypes.filterFighters) {
+    newStarFighters = currentStarFighters.filter(
+      (fighter) => fighter.species === action.species
+    );
+  } else {
+    newStarFighters = [...currentStarFighters];
   }
-
   return newStarFighters;
 };
 
