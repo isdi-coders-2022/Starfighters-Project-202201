@@ -23,7 +23,6 @@ const matchesReducer = (currentMyFighters, action) => {
         return { ...starFighter };
       });
       break;
-
     default:
       newMyFighters = [...currentMyFighters];
   }

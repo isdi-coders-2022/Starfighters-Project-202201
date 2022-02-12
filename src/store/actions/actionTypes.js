@@ -5,5 +5,7 @@ const actionTypes = {
   updateFighter: "update-fighter",
   loadFighter: "load-fighter",
   filterFighters: "filter-fighters",
+  setError: "set-error",
+  unsetError: "unset-error",
 };
 export default actionTypes;
