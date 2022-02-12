@@ -2,12 +2,13 @@ import { useCallback, useContext } from "react";
 import {
   filterFightersAction,
   loadFightersAction,
+  setErrorAction,
 } from "../store/actions/actionCreators";
 import StarContext from "../store/contexts/StarContext/StarContext";
 
 const usePublicAPI = () => {
   const apiUrl = process.env.REACT_APP_API_ORIGIN;
-  const { dispatch } = useContext(StarContext);
+  const { dispatch, statusDispatch } = useContext(StarContext);
 
   const loadFightersAPI = useCallback(async () => {
     try {
@@ -19,8 +20,10 @@ const usePublicAPI = () => {
       );
 
       dispatch(loadFightersAction(filteredFighters));
-    } catch (error) {}
-  }, [apiUrl, dispatch]);
+    } catch (error) {
+      statusDispatch(setErrorAction());
+    }
+  }, [apiUrl, dispatch, statusDispatch]);
   const filterFighters = (species) => {
     dispatch(filterFightersAction(species));
   };
