@@ -84,34 +84,4 @@ describe("Given a CharacterListComponent,", () => {
       expect(expectedOutput.textContent).toStrictEqual(fighter.name);
     });
   });
-  /* describe("When it receives a fighter id 1", () => {
-    test("Then it should redirect to '/character-details/1", () => {
-      const mockedUsedNavigate = jest.fn();
-
-      jest.mock("react-router-dom", () => ({
-        ...jest.requireActual("react-router-dom"),
-        useNavigate: () => mockedUsedNavigate,
-      }));
-      const fighter = {
-        id: 1,
-        name: "Luke Skywalker",
-        height: 1.72,
-        mass: 73,
-        gender: "male",
-        homeworld: "tatooine",
-        wiki: "http://starwars.wikia.com/wiki/Luke_Skywalker",
-        image:
-          "https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg",
-        born: -19,
-        bornLocation: "polis massa",
-      };
-      render(
-        <BrowserRouter>
-          <CharactersListComponent fighter={fighter}></CharactersListComponent>
-        </BrowserRouter>
-      );
-      userEvent.click(screen.getByRole("listitem"));
-      expect(mockedUsedNavigate).toHaveBeenCalled();
-    });
-  }); */
 });
