@@ -23,18 +23,6 @@ const matchesReducer = (currentMyFighters, action) => {
         return { ...starFighter };
       });
       break;
-    case actionTypes.setError:
-      newMyFighters = {
-        ...currentMyFighters,
-        error: true,
-      };
-      break;
-    case actionTypes.unsetError:
-      newMyFighters = {
-        ...currentMyFighters,
-        error: false,
-      };
-      break;
     default:
       newMyFighters = [...currentMyFighters];
   }

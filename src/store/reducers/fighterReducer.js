@@ -8,19 +8,6 @@ const fighterReducer = (currentFighter, action) => {
       newFighter = { ...action.fighter };
       break;
 
-    case actionTypes.setError:
-      newFighter = {
-        ...currentFighter,
-        error: true,
-      };
-      break;
-    case actionTypes.unsetError:
-      newFighter = {
-        ...currentFighter,
-        error: false,
-      };
-      break;
-
     default:
       newFighter = { ...currentFighter };
   }

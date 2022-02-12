@@ -13,18 +13,6 @@ const starReducer = (currentStarFighters, action) => {
         (fighter) => fighter.species === action.species
       );
       break;
-    case actionTypes.setError:
-      newStarFighters = {
-        ...currentStarFighters,
-        error: true,
-      };
-      break;
-    case actionTypes.unsetError:
-      newStarFighters = {
-        ...currentStarFighters,
-        error: false,
-      };
-      break;
 
     default:
       newStarFighters = [...currentStarFighters];
