@@ -54,7 +54,7 @@ export const handlers = [
             gender: "male",
             homeworld: "tatooine",
             species: "droid",
-            wiki: "http://starwars.wikia.com/wiki/C-3PO",
+            wiki: "https://starwars.wikia.com/wiki/C-3PO",
             image:
               "https://vignette.wikia.nocookie.net/starwars/images/3/3f/C-3PO_TLJ_Card_Trader_Award_Card.png",
             dateCreated: -32,
@@ -97,7 +97,7 @@ export const handlers = [
             gender: "male",
             homeworld: "naboo",
             species: "droid",
-            wiki: "http://starwars.wikia.com/wiki/R2-D2",
+            wiki: "https://starwars.wikia.com/wiki/R2-D2",
             image:
               "https://vignette.wikia.nocookie.net/starwars/images/e/eb/ArtooTFA2-Fathead.png",
             manufacturer: "Industrial Automaton",
