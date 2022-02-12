@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Error from "../components/ErrorComponent/ErrorComponent";
+import Error from "../components/Error/Error";
 
 describe("Given an Error component", () => {
   describe("When invoked", () => {

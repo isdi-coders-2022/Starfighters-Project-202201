@@ -1,4 +1,4 @@
-import CharacterDetailsBox from "./CharacterDetailsComponent.style";
+import CharacterDetailsBox from "./CharacterDetailsBox";
 
 const CharactersDetailsComponent = ({ fighter }) => {
   return (
