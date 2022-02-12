@@ -1,5 +1,5 @@
-import { loadFighterAction } from "../actions/actionCreators";
-import fighterReducer from "./fighterReducer";
+import { loadFighterAction } from "../store/actions/actionCreators";
+import fighterReducer from "../store/reducers/fighterReducer";
 
 describe("Given a fighterReducer reducer", () => {
   describe("When given an action and an id", () => {
