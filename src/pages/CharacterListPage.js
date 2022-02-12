@@ -10,7 +10,7 @@ import CharactersListComponent from "../components/CharacterListComponent/Charac
 
 const CharacterListPage = () => {
   const { starFighters } = useContext(StarContext);
-  const { filterFighters } = usePublicAPI();
+  const { filterFighters, loadFightersAPI } = usePublicAPI();
   const { addFighterAPI } = useStarAPI();
 
   let navigate = useNavigate();
@@ -21,12 +21,31 @@ const CharacterListPage = () => {
     <>
       <div className="filter">
         <ButtonText
+          text={"ALL"}
+          onClickAction={async () => {
+            await loadFightersAPI();
+          }}
+        />
+        <ButtonText
           text={"HUMANS"}
-          onClickAction={() => filterFighters("human")}
+          onClickAction={async () => {
+            await loadFightersAPI();
+            filterFighters("human");
+          }}
         />
         <ButtonText
           text={"DROIDS"}
-          onClickAction={() => filterFighters("droid")}
+          onClickAction={async () => {
+            await loadFightersAPI();
+            filterFighters("droid");
+          }}
+        />
+        <ButtonText
+          text={"WOOKIEE"}
+          onClickAction={async () => {
+            await loadFightersAPI();
+            filterFighters("wookiee");
+          }}
         />
       </div>
       <StarFightersBox className="list-unstyled">
