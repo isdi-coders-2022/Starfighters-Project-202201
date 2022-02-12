@@ -8,7 +8,7 @@ import {
 import StarContext from "../store/contexts/StarContext/StarContext";
 
 const useStarAPI = () => {
-  const apiUrl = process.env.REACT_APP_API_URL;
+  let apiUrl = process.env.REACT_APP_API_URL;
   const { myDispatch, fighterDispatch } = useContext(StarContext);
 
   const loadMyFighters = useCallback(async () => {

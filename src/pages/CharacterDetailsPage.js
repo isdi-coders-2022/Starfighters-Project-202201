@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import CharactersDetailsComponent from "../components/CharacterDetailsComponent/CharacterDetailsComponent";
+import CharactersDetailsComponent from "../components/CharacterDetailsComponent/CharactersDetailsComponent";
 import useStarAPI from "../hooks/useStarAPI";
 import StarContext from "../store/contexts/StarContext/StarContext";
 

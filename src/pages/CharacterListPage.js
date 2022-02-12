@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import CharactersListComponent from "../components/CharacterListComponent/CharacterListComponent";
 import StarContext from "../store/contexts/StarContext/StarContext";
-import ButtonText from "../components/ButtonTextComponent/ButtonComponent/ButtonTextComponent";
+import ButtonText from "../components/ButtonText/ButtonText";
 import usePublicAPI from "../hooks/usePublicAPI";
-import ButtonImage from "../components/ButtonImageComponent/ButtonImageComponent";
+import ButtonImage from "../components/ButtonImage/ButtonImage";
 import useStarAPI from "../hooks/useStarAPI";
-import StarFightersBox from "./StarFightersBoxUl.style";
+import StarFightersBox from "./StarFightersBox";
+import CharactersListComponent from "../components/CharacterListComponent/CharactersListComponent";
 
 const CharacterListPage = () => {
   const { starFighters } = useContext(StarContext);
