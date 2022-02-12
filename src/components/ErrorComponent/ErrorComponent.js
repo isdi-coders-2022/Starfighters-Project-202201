@@ -1,4 +1,12 @@
+import { useContext } from "react";
+import "./Error.css";
+import StarContext from "../../store/contexts/StarContext/StarContext";
+
 const Error = () => {
-  return <h2 className="classname">Unexpected Error</h2>;
+  const {
+    apiStatus: { error },
+  } = useContext(StarContext);
+  return <>{error && <p className="error">Error fetching data</p>}</>;
 };
+
 export default Error;
