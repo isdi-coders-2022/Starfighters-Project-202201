@@ -33,3 +33,7 @@ export const filterFightersAction = (species) => ({
 export const setErrorAction = () => ({
   type: actionTypes.setError,
 });
+
+export const unsetErrorAction = () => ({
+  type: actionTypes.unsetError,
+});
