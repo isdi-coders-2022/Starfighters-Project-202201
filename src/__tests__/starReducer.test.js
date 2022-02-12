@@ -1,5 +1,5 @@
-import actionTypes from "../actions/actionTypes";
-import starReducer from "./starReducer";
+import actionTypes from "../store/actions/actionTypes";
+import starReducer from "../store/reducers/starReducer";
 
 describe("Given a starReducer function", () => {
   describe("When given an array with three fighters and the loadFighters action", () => {
