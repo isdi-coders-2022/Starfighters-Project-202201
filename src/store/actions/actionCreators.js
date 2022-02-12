@@ -29,3 +29,7 @@ export const filterFightersAction = (species) => ({
   type: actionTypes.filterFighters,
   species,
 });
+
+export const setErrorAction = () => ({
+  type: actionTypes.setError,
+});
