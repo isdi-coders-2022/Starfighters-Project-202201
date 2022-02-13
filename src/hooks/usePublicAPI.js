@@ -4,6 +4,8 @@ import {
   loadFightersAction,
   setErrorAction,
   unsetErrorAction,
+  setLoadingAction,
+  unsetLoadingAction,
 } from "../store/actions/actionCreators";
 import StarContext from "../store/contexts/StarContext/StarContext";
 
@@ -13,6 +15,7 @@ const usePublicAPI = () => {
 
   const loadFightersAPI = useCallback(async () => {
     try {
+      statusDispatch(setLoadingAction());
       statusDispatch(unsetErrorAction());
       const noImage = [82, 77, 57, 56, 49, 47, 37, 28, 26];
       const response = await fetch(apiUrl);
@@ -25,6 +28,7 @@ const usePublicAPI = () => {
     } catch (error) {
       statusDispatch(setErrorAction());
     }
+    statusDispatch(unsetLoadingAction());
   }, [apiUrl, dispatch, statusDispatch]);
 
   const filterFighters = (species) => {
