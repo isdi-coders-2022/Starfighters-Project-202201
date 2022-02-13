@@ -7,5 +7,6 @@ const actionTypes = {
   filterFighters: "filter-fighters",
   setError: "set-error",
   unsetError: "unset-error",
+  getPageCharacters: "get-page-characters",
 };
 export default actionTypes;

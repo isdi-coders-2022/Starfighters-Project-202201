@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 import fighterReducer from "../../reducers/fighterReducer";
 import matchesReducer from "../../reducers/matchesReducer";
 import starReducer from "../../reducers/starReducer";
@@ -14,7 +14,7 @@ const StarContextProvider = ({ children }) => {
   const [fighter, fighterDispatch] = useReducer(fighterReducer, {});
   const [myFighters, myDispatch] = useReducer(matchesReducer, []);
   const charactersPerPage = 20;
-  const currentPage = 1;
+  const [currentPage, setCurrentPage] = useState(1);
   return (
     <StarContext.Provider
       value={{
@@ -28,6 +28,7 @@ const StarContextProvider = ({ children }) => {
         statusDispatch,
         charactersPerPage,
         currentPage,
+        setCurrentPage,
       }}
     >
       {children}
