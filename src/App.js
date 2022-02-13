@@ -120,8 +120,8 @@ function App() {
               element={<CharacterMatchesListPage />}
             />
             <Route
-              path="/character-details/:id"
-              element={<CharacterDetailsPage />}
+              path="/character-matches/:id"
+              element={<CharacterMatchesListPage />}
             />
             <Route
               path="/character-creator"
