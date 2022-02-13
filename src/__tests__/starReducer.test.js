@@ -421,7 +421,7 @@ describe("Given a starReducer function", () => {
         },
       ];
       const action = {
-        type: actionTypes,
+        type: "hola",
         starFighters: inputFighters,
       };
       const newFighters = starReducer(inputFighters, action);

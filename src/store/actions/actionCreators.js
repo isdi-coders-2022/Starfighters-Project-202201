@@ -45,3 +45,9 @@ export const setLoadingAction = () => ({
 export const unsetLoadingAction = () => ({
   type: actionTypes.unsetLoading,
 });
+
+export const getPageCharactersAction = (currentPage, charactersPerPage) => ({
+  type: actionTypes.getPageCharacters,
+  currentPage,
+  charactersPerPage,
+});
