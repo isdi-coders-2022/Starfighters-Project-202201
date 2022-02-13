@@ -30,6 +30,7 @@ const starReducer = (currentStarFighters, action) => {
 
       break;
     default:
+      newStarFighters = [...currentStarFighters];
   }
   return newStarFighters;
 };
