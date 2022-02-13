@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import Error from "../components/Error/Error";
+import ErrorComponent from "../components/ErrorComponent/ErrorComponent";
 
 describe("Given an Error component", () => {
   describe("When invoked", () => {
-    test("Then it should render a heading", () => {
+    test("Then it should render an image", () => {
       render(<Error />);
-      const element = screen.getByRole("heading");
+      const element = screen.getByRole("img");
 
       expect(element).toBeInTheDocument();
     });

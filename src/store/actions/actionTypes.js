@@ -7,5 +7,7 @@ const actionTypes = {
   filterFighters: "filter-fighters",
   setError: "set-error",
   unsetError: "unset-error",
+  setLoading: "set-loading",
+  unsetLoading: "unset-loading",
 };
 export default actionTypes;

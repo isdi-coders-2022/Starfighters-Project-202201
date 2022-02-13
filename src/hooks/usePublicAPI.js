@@ -26,6 +26,7 @@ const usePublicAPI = () => {
       statusDispatch(setErrorAction());
     }
   }, [apiUrl, dispatch, statusDispatch]);
+
   const filterFighters = (species) => {
     dispatch(filterFightersAction(species));
   };
