@@ -1,21 +1,13 @@
 import { useContext } from "react";
 import "./Error.css";
 import StarContext from "../store/contexts/StarContext/StarContext";
+import Error from "../components/ErrorComponent/ErrorComponent";
 
-const Error = () => {
+const ErrorPage = () => {
   const {
     apiStatus: { error },
   } = useContext(StarContext);
-  return (
-    <>
-      {error && (
-        <img
-          alt="Darth Vader says an error occurred."
-          src="https://d2ofqe7l47306o.cloudfront.net/myfreewallpapers/starwars/wallpapers/darth-vader.jpg"
-        />
-      )}
-    </>
-  );
+  return <>{error && <Error />}</>;
 };
 
-export default Error;
+export default ErrorPage;
