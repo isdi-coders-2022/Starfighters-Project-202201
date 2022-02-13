@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import useStarAPI from "../hooks/useStarAPI";
 import StarContext from "../store/contexts/StarContext/StarContext";
-import starReducer from "../store/reducers/starReducer";
 
 const HomePage = () => {
   const { setCurrentPage, loadFightersAPI, getPageCharacters } = useStarAPI();
