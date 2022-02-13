@@ -8,6 +8,7 @@ import CharacterMatchesListPage from "./pages/CharacterMatchesListPage";
 import usePublicAPI from "./hooks/usePublicAPI";
 import { useEffect } from "react";
 import useStarAPI from "./hooks/useStarAPI";
+import LoadingPage from "./pages/LoadingPage";
 
 const TitleStar = styled.h1`
   color: yellow;
@@ -100,7 +101,7 @@ function App() {
               alt="Fighters"
             />
           </TitleStar>
-
+          <LoadingPage />
           <Routes>
             <Route path="/*" element={<HomePage />}></Route>
             <Route path="/home" element={<HomePage />}></Route>
