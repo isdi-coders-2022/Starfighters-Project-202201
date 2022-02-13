@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import "./Error.css";
 import StarContext from "../store/contexts/StarContext/StarContext";
 import Error from "../components/ErrorComponent/ErrorComponent";
 

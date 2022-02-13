@@ -13,7 +13,8 @@ const StarContextProvider = ({ children }) => {
   const [starFighters, dispatch] = useReducer(starReducer, []);
   const [fighter, fighterDispatch] = useReducer(fighterReducer, {});
   const [myFighters, myDispatch] = useReducer(matchesReducer, []);
-
+  const charactersPerPage = 20;
+  const currentPage = 1;
   return (
     <StarContext.Provider
       value={{
@@ -25,6 +26,8 @@ const StarContextProvider = ({ children }) => {
         myDispatch,
         apiStatus,
         statusDispatch,
+        charactersPerPage,
+        currentPage,
       }}
     >
       {children}

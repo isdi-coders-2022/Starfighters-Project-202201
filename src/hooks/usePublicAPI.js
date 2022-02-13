@@ -1,4 +1,5 @@
 import { useCallback, useContext } from "react";
+import Error from "../pages/ErrorPage";
 import {
   filterFightersAction,
   loadFightersAction,
@@ -9,7 +10,13 @@ import StarContext from "../store/contexts/StarContext/StarContext";
 
 const usePublicAPI = () => {
   const apiUrl = process.env.REACT_APP_API_ORIGIN;
-  const { dispatch, statusDispatch } = useContext(StarContext);
+  const {
+    dispatch,
+    statusDispatch,
+    pageDispatch,
+    charactersPerPage,
+    currentPage,
+  } = useContext(StarContext);
 
   const loadFightersAPI = useCallback(async () => {
     try {
