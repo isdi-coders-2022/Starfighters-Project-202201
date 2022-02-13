@@ -27,8 +27,8 @@ const starReducer = (currentStarFighters, action) => {
       } else {
         newStarFighters = currentStarFighters.slice(indexOfFirstCharacter);
       }
-
       break;
+
     default:
       newStarFighters = [...currentStarFighters];
   }
