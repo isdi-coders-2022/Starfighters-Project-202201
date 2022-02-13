@@ -10,6 +10,7 @@ import { useContext, useEffect } from "react";
 import useStarAPI from "./hooks/useStarAPI";
 import LoadingPage from "./pages/LoadingPage";
 import StarContext from "./store/contexts/StarContext/StarContext";
+import MatchesDetailsPage from "./pages/MatchesDetailsPage";
 
 const TitleStar = styled.h1`
   color: yellow;
@@ -120,8 +121,12 @@ function App() {
               element={<CharacterMatchesListPage />}
             />
             <Route
+              path="/character-details/:id"
+              element={<CharacterDetailsPage />}
+            />
+            <Route
               path="/character-matches/:id"
-              element={<CharacterMatchesListPage />}
+              element={<MatchesDetailsPage />}
             />
             <Route
               path="/character-creator"

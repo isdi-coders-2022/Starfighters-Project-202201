@@ -13,7 +13,7 @@ const CharacterMatchesListPage = () => {
 
   let navigate = useNavigate();
   let goToPage = (id) => {
-    navigate(`/character-details/${id}`);
+    navigate(`/character-matches/${id}`);
   };
   return (
     <>
