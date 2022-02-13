@@ -4,7 +4,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #eaeae1ee;
+  background-color: #232323;
   z-index: 101;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  border: 5px solid #dc1955;
+  border: 5px solid #ffff00;
   border-right-color: transparent;
   position: relative;
   animation-name: spinner;
@@ -37,22 +37,6 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   z-index: -1;
-}
-.loading::after {
-  width: 54px;
-  height: 54px;
-  border: 5px solid #1490e3;
-  border-left-color: transparent;
-  left: -12px;
-  top: -12px;
-}
-.loading::before {
-  width: 68px;
-  height: 68px;
-  border: 5px solid #fca800;
-  border-bottom-color: transparent;
-  left: -19px;
-  top: -19px;
 }
 
 @keyframes spinner {
