@@ -73,30 +73,32 @@ const CharacterListPage = () => {
           </div>
         ))}
       </StarFightersBox>
-      <ButtonImage
-        type="submit"
-        onClickAction={async () => {
-          if (currentPage > 1) {
-            await loadFightersAPI();
-            getPageCharacters(currentPage - 1, charactersPerPage);
-            setCurrentPage(currentPage - 1);
-          }
-        }}
-        src="add"
-        alt="Next page"
-      />
-      <ButtonImage
-        type="submit"
-        onClickAction={async () => {
-          if (currentPage < 4) {
-            await loadFightersAPI();
-            getPageCharacters(currentPage + 1, charactersPerPage);
-            setCurrentPage(currentPage + 1);
-          }
-        }}
-        src="add"
-        alt="Next page"
-      />
+      <div className="page-buttons">
+        <ButtonImage
+          type="submit"
+          onClickAction={async () => {
+            if (currentPage > 1) {
+              await loadFightersAPI();
+              getPageCharacters(currentPage - 1, charactersPerPage);
+              setCurrentPage(currentPage - 1);
+            }
+          }}
+          src="Back"
+          alt="Next page"
+        />
+        <ButtonImage
+          type="submit"
+          onClickAction={async () => {
+            if (currentPage < 4) {
+              await loadFightersAPI();
+              getPageCharacters(currentPage + 1, charactersPerPage);
+              setCurrentPage(currentPage + 1);
+            }
+          }}
+          src="Forward"
+          alt="Next page"
+        />
+      </div>
     </>
   );
 };
