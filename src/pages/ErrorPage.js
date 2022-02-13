@@ -6,6 +6,7 @@ const ErrorPage = () => {
   const {
     apiStatus: { error },
   } = useContext(StarContext);
+
   return <>{error && <Error />}</>;
 };
 
