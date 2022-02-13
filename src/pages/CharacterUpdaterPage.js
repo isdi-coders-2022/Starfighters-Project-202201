@@ -1,24 +1,28 @@
 import { useContext, useState } from "react";
+import { useParams } from "react-router-dom";
 import ButtonImage from "../components/ButtonImage/ButtonImage";
 import CreatorFormStyled from "../components/CreatorForm/CreatorFormStyled";
 
 import useStarAPI from "../hooks/useStarAPI";
 import StarContext from "../store/contexts/StarContext/StarContext";
 
-const CharacterCreatorFormPage = () => {
-  const { addFighterAPI } = useStarAPI();
+const CharacterUpdaterPage = () => {
+  const { updateFighterAPI } = useStarAPI();
   const { myFighters } = useContext(StarContext);
+  const { id } = useParams();
+  const fighter = myFighters.filter((fighter) => fighter.id === id);
 
   const blankFields = {
-    name: "",
-    height: "",
-    mass: "",
-    gender: "",
-    homeworld: "",
-    species: "",
-    affiliation: "",
-    master: "",
-    image: "",
+    name: fighter.name,
+    height: fighter.height,
+    mass: fighter.mass,
+    gender: fighter.gender,
+    homeworld: fighter.homeworld,
+    species: fighter.species,
+    affiliation: fighter.affiliation,
+    master: fighter.master,
+    image: fighter.image,
+    id: fighter.id,
   };
 
   const [formData, setFormData] = useState(blankFields);
@@ -35,25 +39,13 @@ const CharacterCreatorFormPage = () => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    formData.id = myFighters.length + 100;
-    addFighterAPI(formData);
+    updateFighterAPI(formData);
     resetForm();
   };
 
   const resetForm = () => {
     setFormData(blankFields);
   };
-
-  const isFilled =
-    formData.name !== "" &&
-    formData.height !== "" &&
-    formData.mass !== "" &&
-    formData.gender !== "" &&
-    formData.homeworld !== "" &&
-    formData.species !== "" &&
-    formData.afiliation !== "" &&
-    formData.master !== "" &&
-    formData.image !== "";
 
   return (
     <>
@@ -155,7 +147,6 @@ const CharacterCreatorFormPage = () => {
         </div>
         <ButtonImage
           type="submit"
-          disabled={!isFilled}
           src={"Confirm"}
           alt={"Create character"}
         ></ButtonImage>
@@ -164,4 +155,4 @@ const CharacterCreatorFormPage = () => {
   );
 };
 
-export default CharacterCreatorFormPage;
+export default CharacterUpdaterPage;

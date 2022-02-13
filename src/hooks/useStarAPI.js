@@ -4,6 +4,7 @@ import {
   deleteFighterAction,
   loadFighterAction,
   loadFightersAction,
+  updateFighterAction,
 } from "../store/actions/actionCreators";
 import StarContext from "../store/contexts/StarContext/StarContext";
 
@@ -58,11 +59,23 @@ const useStarAPI = () => {
     } catch (error) {}
   };
 
+  const updateFighterAPI = async (id) => {
+    try {
+      await fetch(`${apiUrl}/${id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(id),
+      });
+      myDispatch(updateFighterAction(id));
+    } catch (error) {}
+  };
+
   return {
     loadMyFighters,
     addFighterAPI,
     deleteFighterAPI,
     loadFighter,
+    updateFighterAPI,
   };
 };
 export default useStarAPI;
