@@ -6,9 +6,10 @@ import HomePage from "./pages/HomePage";
 import styled from "styled-components";
 import CharacterMatchesListPage from "./pages/CharacterMatchesListPage";
 import usePublicAPI from "./hooks/usePublicAPI";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import useStarAPI from "./hooks/useStarAPI";
 import LoadingPage from "./pages/LoadingPage";
+import StarContext from "./store/contexts/StarContext/StarContext";
 
 const TitleStar = styled.h1`
   color: yellow;
@@ -51,8 +52,9 @@ const StyledThinDiv = styled.div`
 `;
 
 function App() {
-  const { loadFightersAPI } = usePublicAPI();
+  const { loadFightersAPI, getPageCharacters } = usePublicAPI();
   const { loadMyFighters } = useStarAPI();
+  const { charactersPerPage, setCurrentPage } = useContext(StarContext);
 
   useEffect(() => {
     loadMyFighters();
@@ -68,7 +70,14 @@ function App() {
           <nav className="navigation col-12">
             <ul className="navigation__list list-unstyled">
               <li className="navigation__list__matches">
-                <Link to="/character-list" onClick={loadFightersAPI}>
+                <Link
+                  to="/character-list"
+                  onClick={async () => {
+                    setCurrentPage(1);
+                    await loadFightersAPI();
+                    getPageCharacters(1, charactersPerPage);
+                  }}
+                >
                   <img src="/icons/Search.png" alt=""></img>
                 </Link>
               </li>

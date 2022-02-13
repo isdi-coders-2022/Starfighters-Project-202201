@@ -9,5 +9,6 @@ const actionTypes = {
   unsetError: "unset-error",
   setLoading: "set-loading",
   unsetLoading: "unset-loading",
+  getPageCharacters: "get-page-characters",
 };
 export default actionTypes;

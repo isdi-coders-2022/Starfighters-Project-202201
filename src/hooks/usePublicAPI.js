@@ -1,6 +1,7 @@
 import { useCallback, useContext } from "react";
 import {
   filterFightersAction,
+  getPageCharactersAction,
   loadFightersAction,
   setErrorAction,
   unsetErrorAction,
@@ -34,9 +35,15 @@ const usePublicAPI = () => {
   const filterFighters = (species) => {
     dispatch(filterFightersAction(species));
   };
+
+  const getPageCharacters = (currentPage, charactersPerPage) => {
+    dispatch(getPageCharactersAction(currentPage, charactersPerPage));
+  };
+
   return {
     loadFightersAPI,
     filterFighters,
+    getPageCharacters,
   };
 };
 export default usePublicAPI;

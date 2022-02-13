@@ -10,14 +10,16 @@ import CharactersListComponent from "../components/CharacterListComponent/Charac
 import LoadingPage from "./LoadingPage";
 
 const CharacterListPage = () => {
-  const { starFighters } = useContext(StarContext);
-  const { filterFighters, loadFightersAPI } = usePublicAPI();
+  const { starFighters, currentPage, setCurrentPage, charactersPerPage } =
+    useContext(StarContext);
+  const { filterFighters, loadFightersAPI, getPageCharacters } = usePublicAPI();
   const { addFighterAPI } = useStarAPI();
 
   let navigate = useNavigate();
   let goToPage = (id) => {
     navigate(`/character-details/${id}`);
   };
+
   return (
     <>
       <LoadingPage />
@@ -25,7 +27,9 @@ const CharacterListPage = () => {
         <ButtonText
           text={"ALL"}
           onClickAction={async () => {
+            setCurrentPage(1);
             await loadFightersAPI();
+            getPageCharacters(1, charactersPerPage);
           }}
         />
         <ButtonText
@@ -71,6 +75,32 @@ const CharacterListPage = () => {
           </div>
         ))}
       </StarFightersBox>
+      <div className="page-buttons">
+        <ButtonImage
+          type="submit"
+          onClickAction={async () => {
+            if (currentPage > 1) {
+              await loadFightersAPI();
+              getPageCharacters(currentPage - 1, charactersPerPage);
+              setCurrentPage(currentPage - 1);
+            }
+          }}
+          src="Back"
+          alt="Next page"
+        />
+        <ButtonImage
+          type="submit"
+          onClickAction={async () => {
+            if (currentPage < 4) {
+              await loadFightersAPI();
+              getPageCharacters(currentPage + 1, charactersPerPage);
+              setCurrentPage(currentPage + 1);
+            }
+          }}
+          src="Forward"
+          alt="Next page"
+        />
+      </div>
     </>
   );
 };
