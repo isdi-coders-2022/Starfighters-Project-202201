@@ -37,3 +37,11 @@ export const setErrorAction = () => ({
 export const unsetErrorAction = () => ({
   type: actionTypes.unsetError,
 });
+
+export const setLoadingAction = () => ({
+  type: actionTypes.setLoading,
+});
+
+export const unsetLoadingAction = () => ({
+  type: actionTypes.unsetLoading,
+});
