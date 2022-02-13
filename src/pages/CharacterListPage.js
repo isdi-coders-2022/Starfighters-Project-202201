@@ -7,6 +7,7 @@ import ButtonImage from "../components/ButtonImage/ButtonImage";
 import useStarAPI from "../hooks/useStarAPI";
 import StarFightersBox from "./StarFightersBox";
 import CharactersListComponent from "../components/CharacterListComponent/CharactersListComponent";
+import LoadingPage from "./LoadingPage";
 
 const CharacterListPage = () => {
   const { starFighters, currentPage, setCurrentPage, charactersPerPage } =
@@ -21,6 +22,7 @@ const CharacterListPage = () => {
 
   return (
     <>
+      <LoadingPage />
       <div className="filter">
         <ButtonText
           text={"ALL"}

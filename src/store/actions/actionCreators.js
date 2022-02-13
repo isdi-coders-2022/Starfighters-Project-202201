@@ -38,6 +38,14 @@ export const unsetErrorAction = () => ({
   type: actionTypes.unsetError,
 });
 
+export const setLoadingAction = () => ({
+  type: actionTypes.setLoading,
+});
+
+export const unsetLoadingAction = () => ({
+  type: actionTypes.unsetLoading,
+});
+
 export const getPageCharactersAction = (currentPage, charactersPerPage) => ({
   type: actionTypes.getPageCharacters,
   currentPage,
