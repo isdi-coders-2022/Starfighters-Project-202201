@@ -4,8 +4,8 @@ import useStarAPI from "../hooks/useStarAPI";
 import StarContext from "../store/contexts/StarContext/StarContext";
 
 const HomePage = () => {
-  const { setCurrentPage, loadFightersAPI, getPageCharacters } = useStarAPI();
-  const { charactersPerPage } = useContext(StarContext);
+  const { loadFightersAPI, getPageCharacters } = useStarAPI();
+  const { charactersPerPage, setCurrentPage } = useContext(StarContext);
   return (
     <div className="start-container">
       <h2 className="title"> May the force be with you</h2>
